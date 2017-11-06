@@ -20,7 +20,7 @@ public class ExerciseManager {
 	private HashMap<Double, Date> repMaxHistory;
 	private String title;
 
-	public double getOneRepMax(int reps, double weight) {
+	public double calculate1RepMax(int reps, double weight) {
 
 		double OneRepMax = weight / reps;
 
@@ -31,4 +31,5 @@ public class ExerciseManager {
 		return this.repMaxHistory;
 	}
 
+	
 }
