@@ -6,23 +6,25 @@
 package Controller;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 
 import Model.Workout;
-import Model.Workout;
-import java.util.ArrayList;
 
 public class WorkoutManager {
-	private ArrayList<Workout> pastWorkouts;
+	private HashMap<Date, Workout> pastWorkouts;
 	private ArrayList<Workout> routines;
 
-	public Workout getPastWorkout(int i) {
-		return pastWorkouts.get(i);
+	public Workout getPastWorkout(Date date) {
+		return pastWorkouts.get(date);
 	}
 
-	public Workout getWorkout(int i) {
+	public Workout getRoutine(int i) {
 		return routines.get(i);
 	}
-	
-	
-	
+
+	public void newEmptyWorkout() {
+
+	}
+
 }
