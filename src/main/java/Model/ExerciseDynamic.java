@@ -8,53 +8,54 @@ package Model;
 import java.util.ArrayList;
 
 public class ExerciseDynamic extends Exercise {
-	private ArrayList<Integer> reps;
-	private int[] tempo; // opcional
-	private double weight;
-	private double suggestedRest; // opcional
-        
-        private ExerciseDynamic(ExerciseDynamicBuilder builder) {
-            this.title = builder.title;
-            this.equipment = builder.equipment;
-            this.reps = builder.reps;
-            this.weight = builder.weight;
-            this.description = builder.description;
-            this.suggestedRest = builder.suggestedRest;
-        }
 
-	public ArrayList<Integer> getReps() {
-		return reps;
-	}
+    private ArrayList<Integer> reps;
+    private int[] tempo; // opcional
+    private double weight;
+    private double suggestedRest; // opcional
 
-	public void setReps(ArrayList<Integer> reps) {
-		this.reps = reps;
-	}
+    private ExerciseDynamic(ExerciseDynamicBuilder builder) {
+        this.title = builder.title;
+        this.equipment = builder.equipment;
+        this.reps = builder.reps;
+        this.weight = builder.weight;
+        this.description = builder.description;
+        this.suggestedRest = builder.suggestedRest;
+    }
 
-	public int[] getTempo() {
-		return tempo;
-	}
+    public ArrayList<Integer> getReps() {
+        return reps;
+    }
 
-	public void setTempo(int[] tempo) {
-		this.tempo = tempo;
-	}
+    public void setReps(ArrayList<Integer> reps) {
+        this.reps = reps;
+    }
 
-	public double getWeight() {
-		return weight;
-	}
+    public int[] getTempo() {
+        return tempo;
+    }
 
-	public void setWeight(double weight) {
-		this.weight = weight;
-	}
+    public void setTempo(int[] tempo) {
+        this.tempo = tempo;
+    }
 
-	public double getSuggestedRest() {
-		return suggestedRest;
-	}
+    public double getWeight() {
+        return weight;
+    }
 
-	public void setSuggestedRest(double suggestedRest) {
-		this.suggestedRest = suggestedRest;
-	}
-        
-        public static class ExerciseDynamicBuilder {
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public double getSuggestedRest() {
+        return suggestedRest;
+    }
+
+    public void setSuggestedRest(double suggestedRest) {
+        this.suggestedRest = suggestedRest;
+    }
+
+    public static class ExerciseDynamicBuilder implements ExerciseBuilder {
 
         private ArrayList<Integer> reps;
         private int[] tempo; //optional
@@ -84,7 +85,7 @@ public class ExerciseDynamic extends Exercise {
             return this;
         }
 
-        public ExerciseDynamic build() {
+        public Exercise build() {
             return new ExerciseDynamic(this);
         }
     }

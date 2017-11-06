@@ -12,48 +12,49 @@ import java.util.ArrayList;
  * @author pergher
  */
 public class ExerciseIsometric extends Exercise {
-	private double weight;
-	private ArrayList<Double> sets;
-	private double suggestedRest; // opcional
-        
-        private ExerciseIsometric(ExerciseIsometricBuilder builder) {
-            this.title = builder.title;
-            this.equipment = builder.equipment;
-            this.sets = builder.sets;
-            this.weight = builder.weight;
-            this.description = builder.description;
-            this.suggestedRest = builder.suggestedRest;
-        }
 
-	public double getWeight() {
-		return weight;
-	}
+    private double weight;
+    private ArrayList<Double> sets;
+    private double suggestedRest; // opcional
 
-	public void setWeight(double weight) {
-		this.weight = weight;
-	}
+    private ExerciseIsometric(ExerciseIsometricBuilder builder) {
+        this.title = builder.title;
+        this.equipment = builder.equipment;
+        this.sets = builder.sets;
+        this.weight = builder.weight;
+        this.description = builder.description;
+        this.suggestedRest = builder.suggestedRest;
+    }
 
-	public ArrayList<Double> getSets() {
-		return sets;
-	}
+    public double getWeight() {
+        return weight;
+    }
 
-	public void setSets(ArrayList<Double> sets) {
-		this.sets = sets;
-	}
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 
-	public double getSuggestedRest() {
-		return suggestedRest;
-	}
+    public ArrayList<Double> getSets() {
+        return sets;
+    }
 
-	public void setSuggestedRest(double suggestedRest) {
-		this.suggestedRest = suggestedRest;
-	}
-        
-        public static class ExerciseIsometricBuilder {
+    public void setSets(ArrayList<Double> sets) {
+        this.sets = sets;
+    }
+
+    public double getSuggestedRest() {
+        return suggestedRest;
+    }
+
+    public void setSuggestedRest(double suggestedRest) {
+        this.suggestedRest = suggestedRest;
+    }
+
+    public static class ExerciseIsometricBuilder implements ExerciseBuilder {
 
         private double weight;
-	private ArrayList<Double> sets;
-	private double suggestedRest; // opcional
+        private ArrayList<Double> sets;
+        private double suggestedRest; // opcional
         private String title, description, equipment; //description optional
 
         public ExerciseIsometricBuilder(String title, String equipment, ArrayList<Double> sets, Double weight) {
@@ -73,7 +74,7 @@ public class ExerciseIsometric extends Exercise {
             return this;
         }
 
-        public ExerciseIsometric build() {
+        public Exercise build() {
             return new ExerciseIsometric(this);
         }
     }
