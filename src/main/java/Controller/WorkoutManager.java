@@ -5,10 +5,14 @@
  */
 package Controller;
 
+import java.util.ArrayList;
+
+import Model.Workout;
+
 /**
  *
  * @author pergher
  */
 public class WorkoutManager {
-    
+	private ArrayList<Workout> pastWorkouts;
 }
