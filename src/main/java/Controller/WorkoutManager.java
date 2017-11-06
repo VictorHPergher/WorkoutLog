@@ -34,6 +34,9 @@ public class WorkoutManager {
 		workouts.put(date, workout);
 		return workout;
 	}
-	
+
+	public void deleteRoutine() {
+
+	}
 
 }
