@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class ExerciseManager {
     
-    private ArrayList<Exercise> exercises;
+    private ArrayList<Exercise> availableExercises;
     private String title;
     
 }
