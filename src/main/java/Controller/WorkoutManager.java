@@ -15,4 +15,8 @@ public class WorkoutManager {
 	private ArrayList<Workout> pastWorkouts;
 	private ArrayList<Workout> workouts;
 
+	public Workout getWorkout(int i) {
+		return null;
+	}
+
 }
