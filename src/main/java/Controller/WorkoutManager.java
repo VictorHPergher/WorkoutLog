@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
+import Model.Exercise;
 import Model.Workout;
 
 public class WorkoutManager {
@@ -29,7 +30,7 @@ public class WorkoutManager {
 		return workout;
 	}
 
-	//Clona uma rotina com novos exercicios identicos
+	// Clona uma rotina com novas instancias dos exercicios da rotina
 	public Workout newWorkoutFromRoutine(Date date, Workout routine) {
 		Workout workout = routine;
 		workouts.put(date, workout);
@@ -37,6 +38,11 @@ public class WorkoutManager {
 	}
 
 	public void deleteRoutine(int i) {
+
+	}
+
+	// ADICINOA UMA NOVA INSTANCIA DE UM EXERCICIO AO WORKOUT
+	public void addExercise(Workout workout, Exercise exercise) {
 
 	}
 
