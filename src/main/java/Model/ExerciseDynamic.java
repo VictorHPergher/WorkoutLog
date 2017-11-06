@@ -7,7 +7,7 @@ package Model;
 
 import java.util.ArrayList;
 
-public class ExerciseDynamic {
+public class ExerciseDynamic extends Exercise {
 	private ArrayList<Integer> reps;
 	private int[] tempo;
 	private double weight;
