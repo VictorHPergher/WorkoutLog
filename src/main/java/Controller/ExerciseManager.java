@@ -22,6 +22,7 @@ import Model.Interval;
 public class ExerciseManager {
 
 	private ArrayList<Exercise> availableExercises;
+	private ArrayList<Exercise> deletedExercises;
 	private HashMap<Double, Date> repMaxHistory;
 
 	private String title;
@@ -36,6 +37,20 @@ public class ExerciseManager {
 	public HashMap<Double, Date> get1RepMaxHistory(Exercise exercise) {
 		return this.repMaxHistory;
 	}
+
+	public void deleteExercise(int index) {
+		//transfere do arraylist available para o deleted
+	}
+
+	public void createIsoExercise() {
+		
+	}
+	
+	public void createDynamExercise() {
+		
+	}
+	
+	public void createAerobicExercise() {}
 
 	public void addInterval(int intesnity, double time, ExerciseAerobic exercise) {
 		exercise.getIntervals().add(new Interval());
