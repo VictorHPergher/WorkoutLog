@@ -19,7 +19,6 @@ public class ExerciseDynamic extends Exercise {
             this.reps = builder.reps;
             this.weight = builder.weight;
             this.description = builder.description;
-            this.reps = builder.reps;
             this.suggestedRest = builder.suggestedRest;
         }
 
