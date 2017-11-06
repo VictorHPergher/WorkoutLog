@@ -18,7 +18,6 @@ public class WorkoutManager {
 	public Workout getWorkout(Date date) {
 		return workouts.get(date);
 	}
-
 	public Workout getRoutine(int i) {
 		return routines.get(i);
 	}
@@ -28,26 +27,26 @@ public class WorkoutManager {
 		routines.add(routine);
 		return routine;
 	}
+	public void deleteRoutine(int i) {
+
+		// APAGA UMA ROTINA
+
+	}
 
 	public Workout newWorkoutEmpty(Date date) {
 		Workout workout = new Workout();
 		workouts.put(date, workout);
 		return workout;
 	}
-
-	// Clona uma rotina com novas instancias dos exercicios da rotina
 	public Workout newWorkoutFromRoutine(Date date, Workout routine) {
 		Workout workout = routine;
 		workouts.put(date, workout);
 		return workout;
 	}
 
-	// APAGA UMA ROTINA
-	public void deleteRoutine(int i) {
-
-	}
-
+	//
 	// TELA DE WORKING OUT
+	//
 
 	// ADICINOA UMA NOVA INSTANCIA DE UM EXERCICIO AO WORKOUT, A PARTIR DE UMA LISTA
 	// DE EXERCICIOS VISIVEL NA TELA
