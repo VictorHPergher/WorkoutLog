@@ -5,10 +5,16 @@
  */
 package Controller;
 
+import Model.Exercise;
+import java.util.ArrayList;
+
 /**
  *
  * @author pergher
  */
 public class ExerciseManager {
+    
+    private ArrayList<Exercise> exercises;
+    private String title;
     
 }
