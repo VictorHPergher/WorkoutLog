@@ -29,14 +29,18 @@ public class WorkoutManager {
 		return workout;
 	}
 
+	//Clona uma rotina com novos exercicios identicos
 	public Workout newWorkoutFromRoutine(Date date, Workout routine) {
 		Workout workout = routine;
 		workouts.put(date, workout);
 		return workout;
 	}
 
-	public void deleteRoutine() {
+	public void deleteRoutine(int i) {
 
 	}
 
+	public void setReps(Workout workout, int index, int[] reps) {
+
+	}
 }
