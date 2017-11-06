@@ -11,6 +11,8 @@ import java.util.HashMap;
 
 import Model.Exercise;
 import Model.ExerciseAerobic;
+import Model.ExerciseDynamic;
+import Model.ExerciseIsometric;
 import Model.Interval;
 
 /**
@@ -21,6 +23,7 @@ public class ExerciseManager {
 
 	private ArrayList<Exercise> availableExercises;
 	private HashMap<Double, Date> repMaxHistory;
+
 	private String title;
 
 	public double calculate1RepMax(int reps, double weight) {
@@ -39,6 +42,21 @@ public class ExerciseManager {
 	}
 
 	public void removeInterval(ExerciseAerobic exercise, int index) {
-		
+
 	}
+
+	public void addSet(ExerciseDynamic exercise, int reps) {
+	}
+
+	public void addSet(ExerciseIsometric exercise, double time) {
+	}
+
+	public void removeSet(Exercise exercise, int index) {
+
+	}
+
+	public void changeWeight(Exercise exercise, double weight) {
+
+	}
+
 }
