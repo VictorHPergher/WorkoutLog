@@ -46,7 +46,8 @@ public class WorkoutManager {
 
 	}
 
-	public void setReps(Workout workout, int index, int[] reps) {
+	public void removeExercise(Workout workout, Exercise exercise) {
 
 	}
+
 }
