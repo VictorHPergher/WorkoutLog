@@ -37,12 +37,15 @@ public class WorkoutManager {
 		return workout;
 	}
 
+	// APAGA UMA ROTINA
 	public void deleteRoutine(int i) {
 
 	}
 
+	// TELA DE WORKING OUT
+
 	// ADICINOA UMA NOVA INSTANCIA DE UM EXERCICIO AO WORKOUT
-	public void addExercise(Workout workout, Exercise exercise) {
+	public void addExercise(Workout workout, Exercise exercise, ExerciseManager em) {
 
 	}
 

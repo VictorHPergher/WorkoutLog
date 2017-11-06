@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class ExerciseDynamic extends Exercise {
 	private ArrayList<Integer> reps;
-	private int[] tempo;
+	private int[] tempo; //opcional
 	private double weight;
+	private double suggestedRest; //opcional
 }

@@ -14,4 +14,5 @@ import java.util.ArrayList;
 public class ExerciseIsometric extends Exercise {
 	private double weight;
 	private ArrayList<Double> duration;
+	private double suggestedRest; //opcional
 }
