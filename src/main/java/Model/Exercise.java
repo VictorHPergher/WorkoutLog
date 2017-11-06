@@ -10,5 +10,5 @@ package Model;
  * @author pergher
  */
 public class Exercise {
-	private String description, title, equipment;
+	protected String description, title, equipment;
 }
