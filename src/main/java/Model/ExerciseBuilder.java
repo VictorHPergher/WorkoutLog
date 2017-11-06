@@ -10,7 +10,9 @@ package Model;
  * @author pergher
  */
 public interface ExerciseBuilder {
-    
-    public Exercise build();
-    
+
+	public Exercise build();
+
+	public ExerciseBuilder addDescription(String description);
+
 }

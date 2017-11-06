@@ -49,7 +49,7 @@ public class ExerciseIsometric extends Exercise {
 		this.suggestedRest = suggestedRest;
 	}
 
-	public static class ExerciseIsometricBuilder {
+	public static class ExerciseIsometricBuilder implements ExerciseBuilder {
 
 		private double weight;
 		private ArrayList<Double> sets;
