@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author pergher
  */
-public class ExerciseIsometric {
+public class ExerciseIsometric extends Exercise {
 	private double weight;
 	private ArrayList<Double> duration;
 }

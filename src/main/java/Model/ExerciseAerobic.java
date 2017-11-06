@@ -7,7 +7,7 @@ package Model;
 
 import java.util.ArrayList;
 
-public class ExerciseAerobic extends Exercise{
+public class ExerciseAerobic extends Exercise {
 	
 	ArrayList<Interval> intervals;
 	
