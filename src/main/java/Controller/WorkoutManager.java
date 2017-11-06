@@ -15,7 +15,7 @@ public class WorkoutManager {
 	private HashMap<Date, Workout> workouts;
 	private ArrayList<Workout> routines;
 
-	public Workout getPastWorkout(Date date) {
+	public Workout getWorkout(Date date) {
 		return workouts.get(date);
 	}
 
@@ -34,5 +34,6 @@ public class WorkoutManager {
 		workouts.put(date, workout);
 		return workout;
 	}
+	
 
 }
