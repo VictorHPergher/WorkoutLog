@@ -42,15 +42,17 @@ public class ExerciseManager {
 		//transfere do arraylist available para o deleted
 	}
 
-	public void createIsoExercise() {
+	public void createIsoExercise(String title, String equipment, ArrayList<Double> sets, Double weight) {
 		
 	}
 	
-	public void createDynamExercise() {
-		
+	public void createDynamExercise(String title, String equipment, ArrayList<Integer> reps, Double weight) {
+            
 	}
 	
-	public void createAerobicExercise() {}
+	public void createAerobicExercise(String title, String equipment, ArrayList<Interval> intervals) {
+            
+        }
 
 	public void addInterval(int intesnity, double time, ExerciseAerobic exercise) {
 		exercise.getIntervals().add(new Interval());
