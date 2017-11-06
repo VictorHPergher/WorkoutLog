@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
-import Model.Exercise;
 import Model.Workout;
 
 public class WorkoutManager {
@@ -22,6 +21,12 @@ public class WorkoutManager {
 
 	public Workout getRoutine(int i) {
 		return routines.get(i);
+	}
+
+	public Workout createRoutine() {
+		Workout routine = new Workout();
+		routines.add(routine);
+		return routine;
 	}
 
 	public Workout newWorkoutEmpty(Date date) {
@@ -44,12 +49,14 @@ public class WorkoutManager {
 
 	// TELA DE WORKING OUT
 
-	// ADICINOA UMA NOVA INSTANCIA DE UM EXERCICIO AO WORKOUT
-	public void addExercise(Workout workout, Exercise exercise, ExerciseManager em) {
+	// ADICINOA UMA NOVA INSTANCIA DE UM EXERCICIO AO WORKOUT, A PARTIR DE UMA LISTA
+	// DE EXERCICIOS VISIVEL NA TELA
+	public void addExercise(Workout workout, int index, ExerciseManager em) {
 
 	}
 
-	public void removeExercise(Workout workout, Exercise exercise) {
+	// REMOVE O EXERCICIO SELECIONADO
+	public void removeExercise(Workout workout, int index) {
 
 	}
 
