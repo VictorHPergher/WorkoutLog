@@ -39,6 +39,6 @@ public class ExerciseManager {
 	}
 
 	public void removeInterval(ExerciseAerobic exercise, int index) {
-
+		
 	}
 }
