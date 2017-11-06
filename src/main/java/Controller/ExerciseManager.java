@@ -7,6 +7,8 @@ package Controller;
 
 import Model.Exercise;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 
 /**
  *
@@ -15,6 +17,7 @@ import java.util.ArrayList;
 public class ExerciseManager {
 
 	private ArrayList<Exercise> availableExercises;
+        private HashMap<Double, Date> repMaxHistory;
 	private String title;
 
 	public double getOneRepMax(int reps, double weight) {
@@ -23,5 +26,9 @@ public class ExerciseManager {
 
 		return OneRepMax;
 	}
+        
+        public HashMap<Double, Date> get1RepMaxHistory(Exercise exercise) {
+            return this.repMaxHistory;
+        }    
 
 }
