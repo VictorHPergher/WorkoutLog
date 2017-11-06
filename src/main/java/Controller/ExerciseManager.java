@@ -13,8 +13,15 @@ import java.util.ArrayList;
  * @author pergher
  */
 public class ExerciseManager {
-    
-    private ArrayList<Exercise> availableExercises;
-    private String title;
-    
+
+	private ArrayList<Exercise> availableExercises;
+	private String title;
+
+	public double getOneRepMax(int reps, double weight) {
+
+		double OneRepMax = weight / reps;
+
+		return OneRepMax;
+	}
+
 }

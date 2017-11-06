@@ -16,11 +16,13 @@ public class WorkoutManager {
 	private ArrayList<Workout> routines;
 
 	public Workout getPastWorkout(int i) {
-		return null;
+		return pastWorkouts.get(i);
 	}
 
 	public Workout getWorkout(int i) {
-		return null;
+		return routines.get(i);
 	}
-
+	
+	
+	
 }
