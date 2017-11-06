@@ -5,10 +5,10 @@
  */
 package Model;
 
-/**
- *
- * @author pergher
- */
+import java.util.ArrayList;
+
 public class ExerciseDynamic {
-    
+	private ArrayList<Integer> reps;
+	private int[] tempo;
+	private double weight;
 }

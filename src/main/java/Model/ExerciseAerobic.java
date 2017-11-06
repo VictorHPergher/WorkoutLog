@@ -5,10 +5,12 @@
  */
 package Model;
 
-/**
- *
- * @author pergher
- */
-public class ExerciseAerobic {
-    
+import java.util.ArrayList;
+
+public class ExerciseAerobic extends Exercise{
+	
+	ArrayList<Interval> intervals;
+	
+	
+	
 }

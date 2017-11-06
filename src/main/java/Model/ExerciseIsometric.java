@@ -5,10 +5,13 @@
  */
 package Model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author pergher
  */
 public class ExerciseIsometric {
-    
+	private double weight;
+	private ArrayList<Double> duration;
 }
