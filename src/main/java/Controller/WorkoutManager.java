@@ -29,8 +29,8 @@ public class WorkoutManager {
 		return workout;
 	}
 
-	public Workout newWorkoutFromRoutine(Date date, int i) {
-		Workout workout = routines.get(i);
+	public Workout newWorkoutFromRoutine(Date date, Workout routine) {
+		Workout workout = routine;
 		workouts.put(date, workout);
 		return workout;
 	}

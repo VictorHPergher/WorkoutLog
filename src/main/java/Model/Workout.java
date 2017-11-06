@@ -12,9 +12,9 @@ import java.util.ArrayList;
  * @author pergher
  */
 public class Workout {
-    
-    private ArrayList<Exercise> exercises;
-    private String title;
-    
-    
+
+	private ArrayList<Exercise> exercises;
+	private String title;
+	private boolean routine;
+
 }
