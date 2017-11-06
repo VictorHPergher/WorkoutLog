@@ -5,10 +5,12 @@
  */
 package Controller;
 
-import Model.Exercise;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+
+import Model.Exercise;
+import Model.Interval;
 
 /**
  *
@@ -31,5 +33,7 @@ public class ExerciseManager {
 		return this.repMaxHistory;
 	}
 
-	
+	public void addInterval(Interval interval, Exercise exercise) {
+		exercise.
+	}
 }

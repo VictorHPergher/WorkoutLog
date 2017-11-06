@@ -8,9 +8,12 @@ package Model;
 import java.util.ArrayList;
 
 public class ExerciseAerobic extends Exercise {
-	
-	ArrayList<Interval> intervals;
-	
-	
-	
+
+	private ArrayList<Interval> intervals;
+
+	public ArrayList<Interval> getIntervals() {
+		return intervals;
+
+	}
+
 }
