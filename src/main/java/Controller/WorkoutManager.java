@@ -13,7 +13,11 @@ import java.util.ArrayList;
 
 public class WorkoutManager {
 	private ArrayList<Workout> pastWorkouts;
-	private ArrayList<Workout> workouts;
+	private ArrayList<Workout> routines;
+
+	public Workout getPastWorkout(int i) {
+		return null;
+	}
 
 	public Workout getWorkout(int i) {
 		return null;
