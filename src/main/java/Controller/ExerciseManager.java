@@ -17,7 +17,7 @@ import java.util.HashMap;
 public class ExerciseManager {
 
 	private ArrayList<Exercise> availableExercises;
-        private HashMap<Double, Date> repMaxHistory;
+	private HashMap<Double, Date> repMaxHistory;
 	private String title;
 
 	public double getOneRepMax(int reps, double weight) {
@@ -26,9 +26,9 @@ public class ExerciseManager {
 
 		return OneRepMax;
 	}
-        
-        public HashMap<Double, Date> get1RepMaxHistory(Exercise exercise) {
-            return this.repMaxHistory;
-        }    
+
+	public HashMap<Double, Date> get1RepMaxHistory(Exercise exercise) {
+		return this.repMaxHistory;
+	}
 
 }
