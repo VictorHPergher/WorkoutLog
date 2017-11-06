@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.HashMap;
 
 import Model.Exercise;
+import Model.ExerciseAerobic;
 import Model.Interval;
 
 /**
@@ -33,7 +34,11 @@ public class ExerciseManager {
 		return this.repMaxHistory;
 	}
 
-	public void addInterval(Interval interval, Exercise exercise) {
-		exercise.
+	public void addInterval(int intesnity, double time, ExerciseAerobic exercise) {
+		exercise.getIntervals().add(new Interval());
+	}
+
+	public void removeInterval(ExerciseAerobic exercise, int index) {
+
 	}
 }
