@@ -5,10 +5,16 @@
  */
 package Controller;
 
+import Model.Routine;
+import java.util.ArrayList;
+
 /**
  *
  * @author pergher
  */
 public class RoutineManager {
+    
+    private ArrayList<Routine> routines;
+    private String title;
     
 }

@@ -9,6 +9,11 @@ package Model;
  *
  * @author pergher
  */
-public class RepSet {
+public class User {
+    
+    private String name;
+    private int age;
+    private boolean isMale;
+    private double height, weight;
     
 }
