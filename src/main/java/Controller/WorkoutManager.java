@@ -12,19 +12,27 @@ import java.util.HashMap;
 import Model.Workout;
 
 public class WorkoutManager {
-	private HashMap<Date, Workout> pastWorkouts;
+	private HashMap<Date, Workout> workouts;
 	private ArrayList<Workout> routines;
 
 	public Workout getPastWorkout(Date date) {
-		return pastWorkouts.get(date);
+		return workouts.get(date);
 	}
 
 	public Workout getRoutine(int i) {
 		return routines.get(i);
 	}
 
-	public void newEmptyWorkout() {
+	public Workout newWorkoutEmpty(Date date) {
+		Workout workout = new Workout();
+		workouts.put(date, workout);
+		return workout;
+	}
 
+	public Workout newWorkoutFromRoutine(Date date, int i) {
+		Workout workout = routines.get(i);
+		workouts.put(date, workout);
+		return workout;
 	}
 
 }
