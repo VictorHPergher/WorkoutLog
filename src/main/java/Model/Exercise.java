@@ -9,6 +9,6 @@ package Model;
  *
  * @author pergher
  */
-public class Exercise {
+public abstract class Exercise {
 	protected String description, title, equipment;
 }
