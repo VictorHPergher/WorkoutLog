@@ -73,7 +73,7 @@ public class ExerciseIsometric extends Exercise {
 			return this;
 		}
 
-		public ExerciseIsometric build() {
+		public Exercise build() {
 			return new ExerciseIsometric(this);
 		}
 	}
