@@ -7,10 +7,7 @@ package model;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author pergher
- */
+
 public class Workout {
 
 	private ArrayList<Exercise> exercises;
