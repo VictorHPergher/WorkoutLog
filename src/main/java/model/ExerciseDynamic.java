@@ -55,13 +55,12 @@ public class ExerciseDynamic extends Exercise {
         this.suggestedRest = suggestedRest;
     }
 
-    public static class ExerciseDynamicBuilder implements ExerciseBuilder {
+    public static class ExerciseDynamicBuilder extends Exercise implements ExerciseBuilder {
 
         private ArrayList<Integer> reps;
         private int[] tempo; //optional
         private double weight;
         private double suggestedRest; //optional
-        private String title, description, equipment; //description optional
 
         public ExerciseDynamicBuilder(String title, String equipment, ArrayList<Integer> reps, Double weight) {
             this.title = title;
@@ -70,6 +69,7 @@ public class ExerciseDynamic extends Exercise {
             this.weight = weight;
         }
 
+        @Override
         public ExerciseDynamicBuilder addDescription(String description) {
             this.description = description;
             return this;

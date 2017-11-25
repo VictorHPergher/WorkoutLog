@@ -23,10 +23,9 @@ public class ExerciseAerobic extends Exercise {
 
     }
 
-    public static class ExerciseAerobicBuilder implements ExerciseBuilder {
+    public static class ExerciseAerobicBuilder extends Exercise implements ExerciseBuilder {
 
         private ArrayList<Interval> intervals;
-        private String title, description, equipment; //description optional
 
         public ExerciseAerobicBuilder(String title, String equipment, ArrayList<Interval> intervals) {
             this.title = title;
@@ -34,6 +33,7 @@ public class ExerciseAerobic extends Exercise {
             this.intervals = intervals;
         }
 
+        @Override
         public ExerciseAerobicBuilder addDescription(String description) {
             this.description = description;
             return this;

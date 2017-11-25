@@ -49,12 +49,11 @@ public class ExerciseIsometric extends Exercise {
 		this.suggestedRest = suggestedRest;
 	}
 
-	public static class ExerciseIsometricBuilder implements ExerciseBuilder {
+	public static class ExerciseIsometricBuilder extends Exercise implements ExerciseBuilder {
 
 		private double weight;
 		private ArrayList<Double> sets;
 		private double suggestedRest; // opcional
-		private String title, description, equipment; // description optional
 
 		public ExerciseIsometricBuilder(String title, String equipment, ArrayList<Double> sets, Double weight) {
 			this.title = title;
@@ -63,6 +62,7 @@ public class ExerciseIsometric extends Exercise {
 			this.weight = weight;
 		}
 
+                @Override
 		public ExerciseIsometricBuilder addDescription(String description) {
 			this.description = description;
 			return this;
