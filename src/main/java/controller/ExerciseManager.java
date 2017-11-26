@@ -24,26 +24,25 @@ public class ExerciseManager {
 	private ArrayList<Exercise> availableExercises;
 	private ArrayList<Exercise> deletedExercises;
 	private HashMap<Double, Date> repMaxHistory;
-
-	private String title;
+        private String title;
 
 	public double calculate1RepMax(int reps, double weight) {
 
-		double OneRepMax = weight / reps;
+            double OneRepMax = weight / reps;
 
-		return OneRepMax;
+            return OneRepMax;
 	}
 
 	public HashMap<Double, Date> get1RepMaxHistory(Exercise exercise) {
-		return this.repMaxHistory;
+            return this.repMaxHistory;
 	}
 
 	public void deleteExercise(int index) {
-		//transfere do arraylist available para o deleted
+            //transfere do arraylist available para o deleted
 	}
 
 	public void addInterval(int intesnity, double time, ExerciseAerobic exercise) {
-		exercise.getIntervals().add(new Interval());
+            exercise.getIntervals().add(new Interval());
 	}
 
 	public void removeInterval(ExerciseAerobic exercise, int index) {
@@ -56,12 +55,12 @@ public class ExerciseManager {
 	public void addSet(ExerciseIsometric exercise, double time) {
 	}
 
-	public void removeSet(Exercise exercise, int index) {
+	public void removeSet(ExerciseIsometric exercise, int index) {
 
 	}
 
 	public void changeWeight(Exercise exercise, double weight) {
-
+            availableExercises.get(availableExercises.indexOf(exercise)).setWeight(weight);
 	}
         
         //creates exercises through builders

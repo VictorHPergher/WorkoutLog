@@ -11,4 +11,10 @@ package model;
  */
 public abstract class Exercise {
 	protected String description, title, equipment;
+        
+        protected double weight;
+        
+        public void setWeight(double weight) {
+            this.weight = weight;
+        }
 }
