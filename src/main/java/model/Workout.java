@@ -13,5 +13,9 @@ public class Workout {
 	private ArrayList<Exercise> exercises;
 	private String title;
 	private boolean routine;
+        
+        public void remove(int index) {
+            exercises.remove(index);
+        }
 
 }
