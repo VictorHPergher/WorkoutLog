@@ -52,8 +52,8 @@ public class WorkoutManager {
 
 	}
 
-	public void removeExercise(Date date, int index) {
-            workouts.get(date).remove(index);
+	public void removeExercise(Workout workout, int index) {
+            routines.get(routines.indexOf(workout)).remove(index);
 	}
 
 }
