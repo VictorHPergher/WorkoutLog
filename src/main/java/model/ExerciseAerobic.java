@@ -20,7 +20,6 @@ public class ExerciseAerobic extends Exercise {
 
     public ArrayList<Interval> getIntervals() {
         return intervals;
-
     }
 
     public static class ExerciseAerobicBuilder extends Exercise implements ExerciseBuilder {

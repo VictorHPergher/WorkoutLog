@@ -38,25 +38,33 @@ public class ExerciseManager {
 	}
 
 	public void deleteExercise(int index) {
-            //transfere do arraylist available para o deleted
+            deletedExercises.add(availableExercises.get(index));
+            availableExercises.remove(index);
 	}
+        
+        public void recoverExercise(int index) {
+            availableExercises.add(deletedExercises.get(index));
+            deletedExercises.remove(index);
+        }
 
-	public void addInterval(int intesnity, double time, ExerciseAerobic exercise) {
-            exercise.getIntervals().add(new Interval());
+	public void addInterval(int intensity, double time, ExerciseAerobic exercise) {
+            availableExercises.get(availableExercises.indexOf(exercise)).getIntervals().add(new Interval(intensity, time));
 	}
 
 	public void removeInterval(ExerciseAerobic exercise, int index) {
-
+            availableExercises.get(availableExercises.indexOf(exercise)).getIntervals().remove(index);
 	}
 
 	public void addSet(ExerciseDynamic exercise, int reps) {
+            availableExercises.get(availableExercises.indexOf(exercise)).getReps().add(reps);
 	}
 
-	public void addSet(ExerciseIsometric exercise, double time) {
+	public void addRep(ExerciseIsometric exercise, double time) {
+            availableExercises.get(availableExercises.indexOf(exercise)).getSets().add(time);
 	}
 
-	public void removeSet(ExerciseIsometric exercise, int index) {
-
+	public void removeRep(ExerciseIsometric exercise, int index) {
+            availableExercises.get(availableExercises.indexOf(exercise)).getSets().remove(index);
 	}
 
 	public void changeWeight(Exercise exercise, double weight) {

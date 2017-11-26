@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author pergher
@@ -12,9 +14,24 @@ package model;
 public abstract class Exercise {
 	protected String description, title, equipment;
         
-        protected double weight;
+        private double weight;
+        private ArrayList<Double> sets;
+        private ArrayList<Integer> reps;
+        private ArrayList<Interval> intervals;
         
         public void setWeight(double weight) {
             this.weight = weight;
+        }
+        
+        public ArrayList<Double> getSets() {
+		return sets;
+	}
+        
+        public ArrayList<Integer> getReps() {
+            return reps;
+        }
+        
+        public ArrayList<Interval> getIntervals() {
+            return intervals;
         }
 }
