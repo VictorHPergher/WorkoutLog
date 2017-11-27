@@ -1,5 +1,7 @@
 package view;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
 
 import javax.swing.JFrame;
@@ -15,16 +17,27 @@ public abstract class Menu extends JFrame {
 	String exerciseManagerPath = "exerciseManager.txt";
 
 	public Menu() {
-		tryRead("workoutManager.txt", "exerciseManager.txt");
-		trySave();
-
+		tryReadAll(workoutManagerPath, exerciseManagerPath);
+		saveOnClose();
 	}
 
-	private void trySave() {
+	private void saveOnClose() {
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent arg0) {
+				trySaveAll();
+			}
 
+		});
+		
 	}
 
-	public void tryRead(String workoutManagerPath, String exerciseManagerPath) {
+	private void trySaveAll() {
+		Persistence.trySave(workoutManager, workoutManagerPath);
+		Persistence.trySave(exerciseManager, exerciseManagerPath);
+	}
+
+	public void tryReadAll(String workoutManagerPath, String exerciseManagerPath) {
 		tryReadWorkoutManager(workoutManagerPath);
 		tryReadExerciseManager(exerciseManagerPath);
 	}
