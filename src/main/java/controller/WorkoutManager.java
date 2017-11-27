@@ -5,7 +5,10 @@
  */
 package controller;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -13,14 +16,22 @@ import model.Workout;
 
 public class WorkoutManager {
 
-	private HashMap<Date, Workout> workouts;
+	private HashMap<String, Workout> workouts;
+        private ArrayList<String> registeredDates;
 	private ArrayList<Workout> routines;
 
+        //format day/month/year
+        private final DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        private final Date now = Calendar.getInstance().getTime();
 	private int routineAmount;
 
 	public int getRoutineAmount() {
 		return routineAmount;
 	}
+        
+        public ArrayList<String> getRegisteredDates() {
+            return this.registeredDates;
+        }
 
 	public Workout getWorkout(Date date) {
 		return workouts.get(date);
@@ -41,15 +52,19 @@ public class WorkoutManager {
 		routines.remove(index);
 	}
 
-	public Workout newWorkoutEmpty(Date date) {
+	public Workout newWorkoutEmpty() {
 		Workout workout = new Workout();
-		workouts.put(date, workout);
+                String reportDate = dateFormat.format(now);
+		workouts.put(reportDate, workout);
+                registeredDates.add(reportDate);
 		return workout;
 	}
 
-	public Workout newWorkoutFromRoutine(Date date, Workout routine) {
+	public Workout newWorkoutFromRoutine(Workout routine) {
 		Workout workout = routine;
-		workouts.put(date, workout);
+                String reportDate = dateFormat.format(now);
+		workouts.put(reportDate, workout);
+                registeredDates.add(reportDate);
 		return workout;
 	}
 
