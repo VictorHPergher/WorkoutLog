@@ -5,11 +5,18 @@
  */
 package model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author pergher
  */
-public class User {
+public class User implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2477121032774414812L;
 
 	private String name;
 	private int age;

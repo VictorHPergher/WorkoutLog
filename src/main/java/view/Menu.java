@@ -9,19 +9,22 @@ import javax.swing.JFrame;
 import controller.ExerciseManager;
 import controller.Persistence;
 import controller.WorkoutManager;
+import model.User;
 
 public abstract class Menu extends JFrame {
-	ExerciseManager exerciseManager;
-	WorkoutManager workoutManager;
-	String workoutManagerPath = "workoutManager.txt";
-	String exerciseManagerPath = "exerciseManager.txt";
+	private ExerciseManager exerciseManager;
+	private WorkoutManager workoutManager;
+	private User user;
+	private String workoutManagerPath = "workoutManager.txt";
+	private String exerciseManagerPath = "exerciseManager.txt";
+	private String userPath = "user.txt";
 
 	public Menu() {
-		tryReadAll(workoutManagerPath, exerciseManagerPath);
-		saveOnClose();
+		tryReadAll(workoutManagerPath, exerciseManagerPath, userPath);
+		addSaveOnCloseListeners();
 	}
 
-	private void saveOnClose() {
+	private void addSaveOnCloseListeners() {
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent arg0) {
@@ -29,17 +32,39 @@ public abstract class Menu extends JFrame {
 			}
 
 		});
-		
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosed(WindowEvent arg0) {
+				trySaveAll();
+			}
+
+		});
+
 	}
 
 	private void trySaveAll() {
 		Persistence.trySave(workoutManager, workoutManagerPath);
 		Persistence.trySave(exerciseManager, exerciseManagerPath);
+		Persistence.trySave(user, userPath);
 	}
 
-	public void tryReadAll(String workoutManagerPath, String exerciseManagerPath) {
+	public void tryReadAll(String workoutManagerPath, String exerciseManagerPath, String userPath) {
 		tryReadWorkoutManager(workoutManagerPath);
 		tryReadExerciseManager(exerciseManagerPath);
+		tryReadUser(userPath);
+	}
+
+	private User tryReadUser(String path) {
+		User user;
+		try {
+			user = Persistence.read(path);
+			System.out.println("Loaded: " + path);
+		} catch (IOException | ClassNotFoundException ex) {
+			System.out.println("Could not load: " + path);
+			user = new User();
+			ex.printStackTrace();
+		}
+		return user;
 	}
 
 	public WorkoutManager tryReadWorkoutManager(String path) {
