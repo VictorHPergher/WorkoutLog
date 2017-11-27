@@ -33,7 +33,7 @@ public class WorkoutManager {
             return this.registeredDates;
         }
 
-	public Workout getWorkout(Date date) {
+	public Workout getWorkout(String date) {
 		return workouts.get(date);
 	}
 
