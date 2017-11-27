@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 
-public class MainMenu extends JFrame {
+public class MainMenu extends Menu {
 
 	/**
 	 * 
@@ -44,6 +44,11 @@ public class MainMenu extends JFrame {
 		panel.add(lblYourRoutines);
 
 		ArrayList<JButton> yourWorkouts = new ArrayList<>();
+
+		// for (int i = 0; i < workoutManager.getRoutineAmount(); i++) {
+		// array_type array_element = array[i];
+		//
+		// }
 
 		// FAZ UM FOR PARA CRIAR UM BOTAO PARA TODO ROUTINE. ADICIONA ESTE ARRAYLIST AO
 		// PAINEL
