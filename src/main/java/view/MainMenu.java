@@ -21,9 +21,7 @@ public class MainMenu extends JFrame {
 	private JPanel contentPane;
 
 	public MainMenu() {
-		
-		
-		
+
 		setTitle("WorkoutLog");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 768, 432);
@@ -46,9 +44,9 @@ public class MainMenu extends JFrame {
 		panel.add(lblYourRoutines);
 
 		ArrayList<JButton> yourWorkouts = new ArrayList<>();
-		
-		//FAZ UM FOR PARA CRIAR UM BOTAO PARA TODO ROUTINE. ADICIONA ESTE ARRAYLIST AO PAINEL
-		
+
+		// FAZ UM FOR PARA CRIAR UM BOTAO PARA TODO ROUTINE. ADICIONA ESTE ARRAYLIST AO
+		// PAINEL
 
 		JButton btnYourWorkouts = new JButton("Your workouts");
 		btnYourWorkouts.addActionListener(new ActionListener() {

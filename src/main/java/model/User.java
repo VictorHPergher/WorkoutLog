@@ -10,60 +10,58 @@ package model;
  * @author pergher
  */
 public class User {
-    
-    private String name;
-    private int age;
-    private boolean isMale;
-    private double height, weight, bodyfat;
 
-    public String getName() {
-        return name;
-    }
+	private String name;
+	private int age;
+	private boolean isMale;
+	private double height, weight, bodyfat;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public int getAge() {
-        return age;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+	public int getAge() {
+		return age;
+	}
 
-    public boolean isIsMale() {
-        return isMale;
-    }
+	public void setAge(int age) {
+		this.age = age;
+	}
 
-    public void setIsMale(boolean isMale) {
-        this.isMale = isMale;
-    }
+	public boolean isIsMale() {
+		return isMale;
+	}
 
-    public double getHeight() {
-        return height;
-    }
+	public void setIsMale(boolean isMale) {
+		this.isMale = isMale;
+	}
 
-    public void setHeight(double height) {
-        this.height = height;
-    }
+	public double getHeight() {
+		return height;
+	}
 
-    public double getWeight() {
-        return weight;
-    }
+	public void setHeight(double height) {
+		this.height = height;
+	}
 
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
+	public double getWeight() {
+		return weight;
+	}
 
-    public double getBodyfat() {
-        return bodyfat;
-    }
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
 
-    public void setBodyfat(double bodyfat) {
-        this.bodyfat = bodyfat;
-    }
-    
-    
-    
+	public double getBodyfat() {
+		return bodyfat;
+	}
+
+	public void setBodyfat(double bodyfat) {
+		this.bodyfat = bodyfat;
+	}
+
 }

@@ -62,7 +62,7 @@ public class ExerciseIsometric extends Exercise {
 			this.weight = weight;
 		}
 
-                @Override
+		@Override
 		public ExerciseIsometricBuilder addDescription(String description) {
 			this.description = description;
 			return this;

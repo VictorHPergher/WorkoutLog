@@ -13,25 +13,25 @@ import java.util.ArrayList;
  */
 public abstract class Exercise {
 	protected String description, title, equipment;
-        
-        private double weight;
-        private ArrayList<Double> sets;
-        private ArrayList<Integer> reps;
-        private ArrayList<Interval> intervals;
-        
-        public void setWeight(double weight) {
-            this.weight = weight;
-        }
-        
-        public ArrayList<Double> getSets() {
+
+	private double weight;
+	private ArrayList<Double> sets;
+	private ArrayList<Integer> reps;
+	private ArrayList<Interval> intervals;
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	public ArrayList<Double> getSets() {
 		return sets;
 	}
-        
-        public ArrayList<Integer> getReps() {
-            return reps;
-        }
-        
-        public ArrayList<Interval> getIntervals() {
-            return intervals;
-        }
+
+	public ArrayList<Integer> getReps() {
+		return reps;
+	}
+
+	public ArrayList<Interval> getIntervals() {
+		return intervals;
+	}
 }
