@@ -12,34 +12,45 @@ import java.util.HashMap;
 import model.Workout;
 
 public class WorkoutManager {
+
 	private HashMap<Date, Workout> workouts;
 	private ArrayList<Workout> routines;
 
-	public Workout getWorkout(Date date) {
-            return workouts.get(date);
+	private int routineAmount;
+
+	public int getRoutineAmount() {
+		return routineAmount;
 	}
+
+	public Workout getWorkout(Date date) {
+		return workouts.get(date);
+	}
+
 	public Workout getRoutine(int index) {
-            return routines.get(index);
+		return routines.get(index);
 	}
 
 	public Workout createRoutine() {
-            Workout routine = new Workout();
-            routines.add(routine);
-            return routine;
+		Workout routine = new Workout();
+		routines.add(routine);
+		routineAmount = routines.size();
+		return routine;
 	}
+
 	public void deleteRoutine(int index) {
-            routines.remove(index);
+		routines.remove(index);
 	}
 
 	public Workout newWorkoutEmpty(Date date) {
-            Workout workout = new Workout();
-            workouts.put(date, workout);
-            return workout;
+		Workout workout = new Workout();
+		workouts.put(date, workout);
+		return workout;
 	}
+
 	public Workout newWorkoutFromRoutine(Date date, Workout routine) {
-            Workout workout = routine;
-            workouts.put(date, workout);
-            return workout;
+		Workout workout = routine;
+		workouts.put(date, workout);
+		return workout;
 	}
 
 	//
@@ -53,7 +64,7 @@ public class WorkoutManager {
 	}
 
 	public void removeExercise(Workout workout, int index) {
-            routines.get(routines.indexOf(workout)).remove(index);
+		routines.get(routines.indexOf(workout)).remove(index);
 	}
 
 }
