@@ -12,7 +12,7 @@ import javax.swing.JList;
  *
  * @author marina
  */
-public class StatisticsMenu extends javax.swing.JFrame {
+public class StatisticsMenu extends Menu {
     
     private WorkoutManager wm;
 
@@ -20,8 +20,12 @@ public class StatisticsMenu extends javax.swing.JFrame {
      * Creates new form StatisticsMenu
      */
     public StatisticsMenu() {
+        super();
         initComponents();
-        String[] dates = wm.getRegisteredDates().toArray(new String[wm.getRegisteredDates().size()]);
+        String[] dates = {"No workout found"};
+        if(!wm.getRegisteredDates().isEmpty()) {
+            dates = wm.getRegisteredDates().toArray(new String[wm.getRegisteredDates().size()]);
+        }
         workoutListPanel.add(new JList(dates));
         pack();
     }
@@ -97,6 +101,7 @@ public class StatisticsMenu extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new StatisticsMenu().setVisible(true);
             }
