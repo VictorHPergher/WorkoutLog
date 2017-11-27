@@ -49,9 +49,9 @@ public abstract class Menu extends JFrame {
 	}
 
 	public void tryReadAll(String workoutManagerPath, String exerciseManagerPath, String userPath) {
-		tryReadWorkoutManager(workoutManagerPath);
-		tryReadExerciseManager(exerciseManagerPath);
-		tryReadUser(userPath);
+		workoutManager = tryReadWorkoutManager(workoutManagerPath);
+		exerciseManager = tryReadExerciseManager(exerciseManagerPath);
+		user = tryReadUser(userPath);
 	}
 
 	private User tryReadUser(String path) {
