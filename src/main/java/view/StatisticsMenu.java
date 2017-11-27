@@ -5,17 +5,25 @@
  */
 package view;
 
+import controller.WorkoutManager;
+import javax.swing.JList;
+
 /**
  *
  * @author marina
  */
 public class StatisticsMenu extends javax.swing.JFrame {
+    
+    private WorkoutManager wm;
 
     /**
      * Creates new form StatisticsMenu
      */
     public StatisticsMenu() {
         initComponents();
+        String[] dates = wm.getRegisteredDates().toArray(new String[wm.getRegisteredDates().size()]);
+        workoutListPanel.add(new JList(dates));
+        pack();
     }
 
     /**
@@ -27,17 +35,34 @@ public class StatisticsMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        workoutListPanel = new javax.swing.JScrollPane();
+        btnCancel = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnCancel.setText("Cancel");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(workoutListPanel, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 304, Short.MAX_VALUE)
+                        .addComponent(btnCancel)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(workoutListPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+                .addComponent(btnCancel)
+                .addContainerGap())
         );
 
         pack();
@@ -79,5 +104,7 @@ public class StatisticsMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancel;
+    private javax.swing.JScrollPane workoutListPanel;
     // End of variables declaration//GEN-END:variables
 }
