@@ -41,6 +41,53 @@ public class EditMenu extends javax.swing.JFrame {
         btnCreateExercise = new javax.swing.JButton();
         btnChangeExercise = new javax.swing.JButton();
         btnDeleteExercise = new javax.swing.JButton();
+        pnlChooseExercise = new javax.swing.JPanel();
+        btnDynamic = new javax.swing.JButton();
+        lblChooseExercise = new javax.swing.JLabel();
+        btnIsometric = new javax.swing.JButton();
+        btnAerobic = new javax.swing.JButton();
+        pnlCreateDynamicExercise = new javax.swing.JPanel();
+        lblCreateDynExercise = new javax.swing.JLabel();
+        btnCancelDyn = new javax.swing.JButton();
+        btnCreateDyn = new javax.swing.JButton();
+        lblTitleDyn = new javax.swing.JLabel();
+        lblEquipDyn = new javax.swing.JLabel();
+        lblRepsDyn = new javax.swing.JLabel();
+        lblWeightDyn = new javax.swing.JLabel();
+        lblDescriptionDyn = new javax.swing.JLabel();
+        txtTitleDyn = new javax.swing.JTextField();
+        txtEquipDyn = new javax.swing.JTextField();
+        txtRepsDyn = new javax.swing.JTextField();
+        txtWeightDyn = new javax.swing.JTextField();
+        txtDescriptionDyn = new javax.swing.JTextField();
+        lblTempoDyn = new javax.swing.JLabel();
+        txtTempoDyn = new javax.swing.JTextField();
+        pnlCreateIsometricExercise = new javax.swing.JPanel();
+        lblCreateIsoExercise = new javax.swing.JLabel();
+        btnCancelIso = new javax.swing.JButton();
+        btnCreateIso = new javax.swing.JButton();
+        lblTitleIso = new javax.swing.JLabel();
+        lblEquipIso = new javax.swing.JLabel();
+        lblSetsIso = new javax.swing.JLabel();
+        lblWeightIso = new javax.swing.JLabel();
+        lblDescriptionIso = new javax.swing.JLabel();
+        txtTitleIso = new javax.swing.JTextField();
+        txtEquipIso = new javax.swing.JTextField();
+        txtSetsIso = new javax.swing.JTextField();
+        txtWeightIso = new javax.swing.JTextField();
+        txtDescriptionIso = new javax.swing.JTextField();
+        pnlCreateAerobicExercise = new javax.swing.JPanel();
+        lblCreateAerExercise = new javax.swing.JLabel();
+        btnCancelAer = new javax.swing.JButton();
+        btnCreateAer = new javax.swing.JButton();
+        lblTitleAer = new javax.swing.JLabel();
+        lblEquipAer = new javax.swing.JLabel();
+        lblIntervalsAer = new javax.swing.JLabel();
+        lblDescriptionAer = new javax.swing.JLabel();
+        txtTitleAer = new javax.swing.JTextField();
+        txtEquipAer = new javax.swing.JTextField();
+        txtIntervalsAer = new javax.swing.JTextField();
+        txtDescriptionAer = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
@@ -162,12 +209,338 @@ public class EditMenu extends javax.swing.JFrame {
 
         getContentPane().add(pnlEditExercises, "card3");
 
+        btnDynamic.setText("Dynamic");
+        btnDynamic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDynamicActionPerformed(evt);
+            }
+        });
+
+        lblChooseExercise.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lblChooseExercise.setText("Choose exercise to create");
+
+        btnIsometric.setText("Isometric");
+        btnIsometric.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIsometricActionPerformed(evt);
+            }
+        });
+
+        btnAerobic.setText("Aerobic");
+        btnAerobic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAerobicActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlChooseExerciseLayout = new javax.swing.GroupLayout(pnlChooseExercise);
+        pnlChooseExercise.setLayout(pnlChooseExerciseLayout);
+        pnlChooseExerciseLayout.setHorizontalGroup(
+            pnlChooseExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlChooseExerciseLayout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(lblChooseExercise, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlChooseExerciseLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnIsometric, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnAerobic, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(79, 79, 79))
+        );
+        pnlChooseExerciseLayout.setVerticalGroup(
+            pnlChooseExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlChooseExerciseLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(lblChooseExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addGroup(pnlChooseExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAerobic, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnIsometric, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(79, 79, 79))
+        );
+
+        getContentPane().add(pnlChooseExercise, "card2");
+
+        lblCreateDynExercise.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
+        lblCreateDynExercise.setText("Create Dynamic Exercise");
+
+        btnCancelDyn.setText("Cancel");
+
+        btnCreateDyn.setText("Create");
+
+        lblTitleDyn.setText("Title:");
+
+        lblEquipDyn.setText("Equipment:");
+
+        lblRepsDyn.setText("Reps:");
+
+        lblWeightDyn.setText("Weight:");
+
+        lblDescriptionDyn.setText("Description:");
+
+        lblTempoDyn.setText("Tempo:");
+
+        javax.swing.GroupLayout pnlCreateDynamicExerciseLayout = new javax.swing.GroupLayout(pnlCreateDynamicExercise);
+        pnlCreateDynamicExercise.setLayout(pnlCreateDynamicExerciseLayout);
+        pnlCreateDynamicExerciseLayout.setHorizontalGroup(
+            pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCreateDynamicExerciseLayout.createSequentialGroup()
+                .addGroup(pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCreateDynamicExerciseLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblCreateDynExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCreateDyn))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCancelDyn))
+                    .addGroup(pnlCreateDynamicExerciseLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlCreateDynamicExerciseLayout.createSequentialGroup()
+                                .addComponent(lblTitleDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTitleDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlCreateDynamicExerciseLayout.createSequentialGroup()
+                                .addGroup(pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblEquipDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblRepsDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblWeightDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblDescriptionDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblTempoDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtEquipDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtRepsDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtWeightDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtDescriptionDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtTempoDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 17, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pnlCreateDynamicExerciseLayout.setVerticalGroup(
+            pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCreateDynamicExerciseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblCreateDynExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTitleDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTitleDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtEquipDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblEquipDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtRepsDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblRepsDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtWeightDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblWeightDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDescriptionDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblDescriptionDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTempoDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTempoDyn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addGroup(pnlCreateDynamicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCancelDyn)
+                    .addComponent(btnCreateDyn))
+                .addContainerGap())
+        );
+
+        getContentPane().add(pnlCreateDynamicExercise, "card3");
+
+        lblCreateIsoExercise.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
+        lblCreateIsoExercise.setText("Create Isometric Exercise");
+
+        btnCancelIso.setText("Cancel");
+
+        btnCreateIso.setText("Create");
+
+        lblTitleIso.setText("Title:");
+
+        lblEquipIso.setText("Equipment:");
+
+        lblSetsIso.setText("Sets:");
+
+        lblWeightIso.setText("Weight:");
+
+        lblDescriptionIso.setText("Description:");
+
+        javax.swing.GroupLayout pnlCreateIsometricExerciseLayout = new javax.swing.GroupLayout(pnlCreateIsometricExercise);
+        pnlCreateIsometricExercise.setLayout(pnlCreateIsometricExerciseLayout);
+        pnlCreateIsometricExerciseLayout.setHorizontalGroup(
+            pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCreateIsometricExerciseLayout.createSequentialGroup()
+                .addGroup(pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCreateIsometricExerciseLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblCreateIsoExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCreateIso))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCancelIso))
+                    .addGroup(pnlCreateIsometricExerciseLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlCreateIsometricExerciseLayout.createSequentialGroup()
+                                .addComponent(lblTitleIso, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTitleIso, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlCreateIsometricExerciseLayout.createSequentialGroup()
+                                .addGroup(pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblEquipIso, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblSetsIso, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblWeightIso, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblDescriptionIso, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtEquipIso, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtSetsIso, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtWeightIso, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtDescriptionIso, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 17, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pnlCreateIsometricExerciseLayout.setVerticalGroup(
+            pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCreateIsometricExerciseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblCreateIsoExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTitleIso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTitleIso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtEquipIso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblEquipIso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtSetsIso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSetsIso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtWeightIso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblWeightIso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDescriptionIso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblDescriptionIso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addGroup(pnlCreateIsometricExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCancelIso)
+                    .addComponent(btnCreateIso))
+                .addContainerGap())
+        );
+
+        getContentPane().add(pnlCreateIsometricExercise, "card3");
+
+        lblCreateAerExercise.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
+        lblCreateAerExercise.setText("Create Aerobic Exercise");
+
+        btnCancelAer.setText("Cancel");
+
+        btnCreateAer.setText("Create");
+
+        lblTitleAer.setText("Title:");
+
+        lblEquipAer.setText("Equipment:");
+
+        lblIntervalsAer.setText("Intervals:");
+
+        lblDescriptionAer.setText("Description:");
+
+        javax.swing.GroupLayout pnlCreateAerobicExerciseLayout = new javax.swing.GroupLayout(pnlCreateAerobicExercise);
+        pnlCreateAerobicExercise.setLayout(pnlCreateAerobicExerciseLayout);
+        pnlCreateAerobicExerciseLayout.setHorizontalGroup(
+            pnlCreateAerobicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCreateAerobicExerciseLayout.createSequentialGroup()
+                .addGroup(pnlCreateAerobicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCreateAerobicExerciseLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnlCreateAerobicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblCreateAerExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCreateAer))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCancelAer))
+                    .addGroup(pnlCreateAerobicExerciseLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(pnlCreateAerobicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlCreateAerobicExerciseLayout.createSequentialGroup()
+                                .addComponent(lblTitleAer, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTitleAer, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlCreateAerobicExerciseLayout.createSequentialGroup()
+                                .addGroup(pnlCreateAerobicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblEquipAer, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblIntervalsAer, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblDescriptionAer, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnlCreateAerobicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtEquipAer, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtIntervalsAer, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtDescriptionAer, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 17, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pnlCreateAerobicExerciseLayout.setVerticalGroup(
+            pnlCreateAerobicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCreateAerobicExerciseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblCreateAerExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateAerobicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTitleAer, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTitleAer, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateAerobicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtEquipAer, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblEquipAer, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateAerobicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtIntervalsAer, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblIntervalsAer, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlCreateAerobicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDescriptionAer, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDescriptionAer, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                .addGroup(pnlCreateAerobicExerciseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCancelAer)
+                    .addComponent(btnCreateAer))
+                .addContainerGap())
+        );
+
+        getContentPane().add(pnlCreateAerobicExercise, "card3");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRoutinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRoutinesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRoutinesActionPerformed
+
+    private void btnDynamicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDynamicActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDynamicActionPerformed
+
+    private void btnIsometricActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIsometricActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIsometricActionPerformed
+
+    private void btnAerobicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAerobicActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAerobicActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,19 +578,66 @@ public class EditMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAerobic;
+    private javax.swing.JButton btnCancelAer;
+    private javax.swing.JButton btnCancelDyn;
+    private javax.swing.JButton btnCancelIso;
     private javax.swing.JButton btnChangeExercise;
     private javax.swing.JButton btnChangeRoutine;
+    private javax.swing.JButton btnCreateAer;
+    private javax.swing.JButton btnCreateDyn;
     private javax.swing.JButton btnCreateExercise;
+    private javax.swing.JButton btnCreateIso;
     private javax.swing.JButton btnCreateRoutine;
     private javax.swing.JButton btnDeleteExercise;
     private javax.swing.JButton btnDeleteRoutine;
+    private javax.swing.JButton btnDynamic;
     private javax.swing.JButton btnExercises;
+    private javax.swing.JButton btnIsometric;
     private javax.swing.JButton btnRoutines;
     private javax.swing.JLabel lblChoose;
+    private javax.swing.JLabel lblChooseExercise;
+    private javax.swing.JLabel lblCreateAerExercise;
+    private javax.swing.JLabel lblCreateDynExercise;
+    private javax.swing.JLabel lblCreateIsoExercise;
+    private javax.swing.JLabel lblDescriptionAer;
+    private javax.swing.JLabel lblDescriptionDyn;
+    private javax.swing.JLabel lblDescriptionIso;
     private javax.swing.JLabel lblEditExercises;
     private javax.swing.JLabel lblEditRoutine;
+    private javax.swing.JLabel lblEquipAer;
+    private javax.swing.JLabel lblEquipDyn;
+    private javax.swing.JLabel lblEquipIso;
+    private javax.swing.JLabel lblIntervalsAer;
+    private javax.swing.JLabel lblRepsDyn;
+    private javax.swing.JLabel lblSetsIso;
+    private javax.swing.JLabel lblTempoDyn;
+    private javax.swing.JLabel lblTitleAer;
+    private javax.swing.JLabel lblTitleDyn;
+    private javax.swing.JLabel lblTitleIso;
+    private javax.swing.JLabel lblWeightDyn;
+    private javax.swing.JLabel lblWeightIso;
     private javax.swing.JPanel pnlChoose;
+    private javax.swing.JPanel pnlChooseExercise;
+    private javax.swing.JPanel pnlCreateAerobicExercise;
+    private javax.swing.JPanel pnlCreateDynamicExercise;
+    private javax.swing.JPanel pnlCreateIsometricExercise;
     private javax.swing.JPanel pnlEditExercises;
     private javax.swing.JPanel pnlEditRoutines;
+    private javax.swing.JTextField txtDescriptionAer;
+    private javax.swing.JTextField txtDescriptionDyn;
+    private javax.swing.JTextField txtDescriptionIso;
+    private javax.swing.JTextField txtEquipAer;
+    private javax.swing.JTextField txtEquipDyn;
+    private javax.swing.JTextField txtEquipIso;
+    private javax.swing.JTextField txtIntervalsAer;
+    private javax.swing.JTextField txtRepsDyn;
+    private javax.swing.JTextField txtSetsIso;
+    private javax.swing.JTextField txtTempoDyn;
+    private javax.swing.JTextField txtTitleAer;
+    private javax.swing.JTextField txtTitleDyn;
+    private javax.swing.JTextField txtTitleIso;
+    private javax.swing.JTextField txtWeightDyn;
+    private javax.swing.JTextField txtWeightIso;
     // End of variables declaration//GEN-END:variables
 }
