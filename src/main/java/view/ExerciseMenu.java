@@ -149,6 +149,9 @@ public class ExerciseMenu extends Menu {
 		btnSaveChanges.addActionListener((e) -> {
 			for (int j = 0; j < jSpinners.length; j++) {
 				exerciseDynamic.getReps().set(j, (Integer) jSpinners[j].getValue());
+
+				// exercise = exerciseDynamic;
+
 			}
 		});
 
