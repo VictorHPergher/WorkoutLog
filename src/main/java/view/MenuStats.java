@@ -17,7 +17,7 @@ import model.Workout;
  *
  * @author marina
  */
-public class StatisticsMenu extends Menu {
+public class MenuStats extends Menu {
 
 	/**
 	 * 
@@ -33,7 +33,7 @@ public class StatisticsMenu extends Menu {
 	 * @throws java.lang.ClassNotFoundException
 	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public StatisticsMenu() throws IOException, ClassNotFoundException {
+	public MenuStats() throws IOException, ClassNotFoundException {
 		super();
 		initComponents();
 		String[] dates = { "No workout found" };
@@ -119,16 +119,16 @@ public class StatisticsMenu extends Menu {
 				}
 			}
 		} catch (ClassNotFoundException ex) {
-			java.util.logging.Logger.getLogger(StatisticsMenu.class.getName()).log(java.util.logging.Level.SEVERE, null,
+			java.util.logging.Logger.getLogger(MenuStats.class.getName()).log(java.util.logging.Level.SEVERE, null,
 					ex);
 		} catch (InstantiationException ex) {
-			java.util.logging.Logger.getLogger(StatisticsMenu.class.getName()).log(java.util.logging.Level.SEVERE, null,
+			java.util.logging.Logger.getLogger(MenuStats.class.getName()).log(java.util.logging.Level.SEVERE, null,
 					ex);
 		} catch (IllegalAccessException ex) {
-			java.util.logging.Logger.getLogger(StatisticsMenu.class.getName()).log(java.util.logging.Level.SEVERE, null,
+			java.util.logging.Logger.getLogger(MenuStats.class.getName()).log(java.util.logging.Level.SEVERE, null,
 					ex);
 		} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-			java.util.logging.Logger.getLogger(StatisticsMenu.class.getName()).log(java.util.logging.Level.SEVERE, null,
+			java.util.logging.Logger.getLogger(MenuStats.class.getName()).log(java.util.logging.Level.SEVERE, null,
 					ex);
 		}
 		// </editor-fold>
@@ -137,11 +137,11 @@ public class StatisticsMenu extends Menu {
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					new StatisticsMenu().setVisible(true);
+					new MenuStats().setVisible(true);
 				} catch (IOException ex) {
-					Logger.getLogger(StatisticsMenu.class.getName()).log(Level.SEVERE, null, ex);
+					Logger.getLogger(MenuStats.class.getName()).log(Level.SEVERE, null, ex);
 				} catch (ClassNotFoundException ex) {
-					Logger.getLogger(StatisticsMenu.class.getName()).log(Level.SEVERE, null, ex);
+					Logger.getLogger(MenuStats.class.getName()).log(Level.SEVERE, null, ex);
 				}
 			}
 		});

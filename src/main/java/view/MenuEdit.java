@@ -18,7 +18,7 @@ import static javax.swing.ListSelectionModel.SINGLE_SELECTION;
  *
  * @author marina
  */
-public class EditMenu extends Menu {
+public class MenuEdit extends Menu {
     
     private JList list;
 
@@ -27,7 +27,7 @@ public class EditMenu extends Menu {
      * @throws java.io.IOException
      * @throws java.lang.ClassNotFoundException
      */
-    public EditMenu() throws IOException, ClassNotFoundException {
+    public MenuEdit() throws IOException, ClassNotFoundException {
         super();
         initComponents();
         String[] titles = {"No exercise found"};
@@ -767,13 +767,13 @@ public class EditMenu extends Menu {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EditMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuEdit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EditMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuEdit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EditMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuEdit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EditMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuEdit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -781,11 +781,11 @@ public class EditMenu extends Menu {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new EditMenu().setVisible(true);
+                    new MenuEdit().setVisible(true);
                 } catch (IOException ex) {
-                    Logger.getLogger(EditMenu.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(MenuEdit.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(EditMenu.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(MenuEdit.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });

@@ -98,7 +98,7 @@ public abstract class Menu extends JFrame {
 	}
 
 	public void gotoMainMenu() {
-		new MainMenu().setVisible(true);
+		new MenuMain().setVisible(true);
 		dispose();
 	}
 

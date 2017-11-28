@@ -15,13 +15,13 @@ import javax.swing.JSeparator;
 import javax.swing.JSpinner;
 import javax.swing.JButton;
 
-public class ExerciseMenu extends Menu {
+public class MenuExercise extends Menu {
 
 	private static final long serialVersionUID = 6309236411171449861L;
 
 	private JPanel contentPane;
 
-	public ExerciseMenu(Exercise exercise) {
+	public MenuExercise(Exercise exercise) {
 		super();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -142,7 +142,7 @@ public class ExerciseMenu extends Menu {
 		btnAddReps.addActionListener((e) -> {
 			exerciseDynamic.getReps().add(0);
 			dispose();
-			new ExerciseMenu(exerciseDynamic);
+			new MenuExercise(exerciseDynamic);
 		});
 
 		JButton btnSaveChanges = new JButton("Save changes");

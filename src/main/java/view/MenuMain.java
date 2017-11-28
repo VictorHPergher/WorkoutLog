@@ -8,9 +8,10 @@ import javax.swing.JLabel;
 import javax.swing.JSeparator;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
-public class MainMenu extends Menu {
+public class MenuMain extends Menu {
 
 	/**
 	 * 
@@ -18,7 +19,7 @@ public class MainMenu extends Menu {
 	private static final long serialVersionUID = 4372775313321311235L;
 	private JPanel contentPane;
 
-	public MainMenu() {
+	public MenuMain() {
 		super();
 		setTitle("WorkoutLog");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -32,6 +33,16 @@ public class MainMenu extends Menu {
 		contentPane.add(panel_3);
 
 		JButton btnNewButton = new JButton("Editor");
+		btnNewButton.addActionListener((e) -> {
+			dispose();
+			try {
+				new MenuEdit().setVisible(true);
+			} catch (ClassNotFoundException | IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+
+		});
 		panel_3.add(btnNewButton);
 
 		JPanel panel_2 = new JPanel();
@@ -85,6 +96,12 @@ public class MainMenu extends Menu {
 
 		JButton btnStats = new JButton("Stats");
 		btnStats.addActionListener((e) -> {
+			dispose();
+			try {
+				new MenuStats().setVisible(true);
+			} catch (ClassNotFoundException | IOException e1) {
+				e1.printStackTrace();
+			}
 		});
 		panel_4.add(btnStats);
 	}

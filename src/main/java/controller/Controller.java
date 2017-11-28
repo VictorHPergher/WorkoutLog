@@ -5,13 +5,13 @@
  */
 package controller;
 
-import view.MainMenu;
+import view.MenuMain;
 
 public class Controller {
 
 	public static void main(String[] args) {
 
-		new MainMenu().setVisible(true);
+		new MenuMain().setVisible(true);
 
 	}
 
