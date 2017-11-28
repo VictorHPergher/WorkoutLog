@@ -20,7 +20,6 @@ import static javax.swing.ListSelectionModel.SINGLE_SELECTION;
 public class StatisticsMenu extends Menu {
 
     private static final long serialVersionUID1 = 4806458398369774862L;
-    private WorkoutManager wm;
     private JList list;
 
     /**
