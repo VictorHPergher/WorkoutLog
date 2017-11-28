@@ -42,15 +42,19 @@ public class MainMenu extends Menu {
 		JLabel lblYourRoutines = new JLabel("Your routines:");
 		panel.add(lblYourRoutines);
 
-		ArrayList<JButton> yourWorkouts = new ArrayList<>();
 
-		// for (int i = 0; i < workoutManager.getRoutineAmount(); i++) {
-		// array_type array_element = array[i];
-		//
-		// }
+		for (int i = 0; i < workoutManager.getRoutineListSize(); i++) {
+			JButton button = new JButton(workoutManager.getRoutine(i).getTitle());
+			button.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					//when a workout button is pressed
+					//copy getRoutine(i) and create a new workout
+					
+				}
+			});
+			panel.add(button);
+		}
 
-		// FAZ UM FOR PARA CRIAR UM BOTAO PARA TODO ROUTINE. ADICIONA ESTE ARRAYLIST AO
-		// PAINEL
 
 		JButton btnYourWorkouts = new JButton("Your workouts");
 		btnYourWorkouts.addActionListener(new ActionListener() {

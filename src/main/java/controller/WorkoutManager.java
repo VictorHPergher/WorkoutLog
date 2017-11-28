@@ -17,9 +17,6 @@ import model.Workout;
 
 public class WorkoutManager implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 4141333640187059208L;
 	private HashMap<String, Workout> workouts;
 	private ArrayList<String> registeredDates;
@@ -28,10 +25,10 @@ public class WorkoutManager implements Serializable {
 	// format day/month/year
 	private final DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 	private final Date now = Calendar.getInstance().getTime();
-	private int routineAmount;
+	private int routineListSize;
 
-	public int getRoutineAmount() {
-		return routineAmount;
+	public int getRoutineListSize() {
+		return routineListSize;
 	}
 
 	public ArrayList<String> getRegisteredDates() {
@@ -49,7 +46,7 @@ public class WorkoutManager implements Serializable {
 	public Workout createRoutine() {
 		Workout routine = new Workout();
 		routines.add(routine);
-		routineAmount = routines.size();
+		routineListSize = routines.size();
 		return routine;
 	}
 

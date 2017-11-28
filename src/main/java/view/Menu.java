@@ -16,9 +16,9 @@ public abstract class Menu extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1831615594212556305L;
-	private ExerciseManager exerciseManager;
-	private WorkoutManager workoutManager;
-	private User user;
+	protected ExerciseManager exerciseManager;
+	protected WorkoutManager workoutManager;
+	protected User user;
 	private String workoutManagerPath = "workoutManager.txt";
 	private String exerciseManagerPath = "exerciseManager.txt";
 	private String userPath = "user.txt";
