@@ -75,6 +75,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Exercises"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExercisesActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblChoose">
           <Properties>
@@ -96,15 +99,23 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace pref="149" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnCreateExercise" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                      <Component id="lblEditExercises" alignment="0" min="-2" pref="188" max="-2" attributes="0"/>
-                      <Component id="btnChangeExercise" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                      <Component id="btnDeleteExercise" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btnCreateExercise" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                              <Component id="lblEditExercises" alignment="0" min="-2" pref="188" max="-2" attributes="0"/>
+                              <Component id="btnChangeExercise" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                              <Component id="btnDeleteExercise" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btnCancelEx" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -119,7 +130,9 @@
                   <Component id="btnChangeExercise" min="-2" pref="46" max="-2" attributes="0"/>
                   <EmptySpace pref="30" max="32767" attributes="0"/>
                   <Component id="btnDeleteExercise" min="-2" pref="46" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="btnCancelEx" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -137,6 +150,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Create "/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreateExerciseActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnChangeExercise">
           <Properties>
@@ -147,6 +163,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Delete"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteExerciseActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnCancelEx">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelExActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -339,6 +366,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancel"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelDynActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCreateDyn">
           <Properties>
@@ -497,6 +527,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancel"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelIsoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCreateIso">
           <Properties>
@@ -638,6 +671,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancel"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelAerActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCreateAer">
           <Properties>
@@ -734,6 +770,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancel"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnDelete">
           <Properties>
@@ -756,15 +795,23 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace pref="149" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnCreateRoutine" min="-2" pref="145" max="-2" attributes="0"/>
-                      <Component id="lblEditRoutine" min="-2" pref="188" max="-2" attributes="0"/>
-                      <Component id="btnChangeRoutine" min="-2" pref="145" max="-2" attributes="0"/>
-                      <Component id="btnDeleteRoutine" min="-2" pref="145" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btnCreateRoutine" min="-2" pref="145" max="-2" attributes="0"/>
+                              <Component id="lblEditRoutine" min="-2" pref="188" max="-2" attributes="0"/>
+                              <Component id="btnChangeRoutine" min="-2" pref="145" max="-2" attributes="0"/>
+                              <Component id="btnDeleteRoutine" min="-2" pref="145" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btnCancelRo" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -779,7 +826,9 @@
                   <Component id="btnChangeRoutine" min="-2" pref="46" max="-2" attributes="0"/>
                   <EmptySpace pref="30" max="32767" attributes="0"/>
                   <Component id="btnDeleteRoutine" min="-2" pref="46" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="btnCancelRo" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -807,6 +856,14 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Delete"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnCancelRo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelRoActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

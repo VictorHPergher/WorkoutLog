@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import static javax.swing.ListSelectionModel.SINGLE_SELECTION;
 
 /**
@@ -60,6 +61,7 @@ public class EditMenu extends Menu {
         btnCreateExercise = new javax.swing.JButton();
         btnChangeExercise = new javax.swing.JButton();
         btnDeleteExercise = new javax.swing.JButton();
+        btnCancelEx = new javax.swing.JButton();
         pnlChooseExercise = new javax.swing.JPanel();
         btnDynamic = new javax.swing.JButton();
         lblChooseExercise = new javax.swing.JLabel();
@@ -117,6 +119,7 @@ public class EditMenu extends Menu {
         btnCreateRoutine = new javax.swing.JButton();
         btnChangeRoutine = new javax.swing.JButton();
         btnDeleteRoutine = new javax.swing.JButton();
+        btnCancelRo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
@@ -129,6 +132,11 @@ public class EditMenu extends Menu {
         });
 
         btnExercises.setText("Exercises");
+        btnExercises.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExercisesActionPerformed(evt);
+            }
+        });
 
         lblChoose.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lblChoose.setText("Choose something to edit");
@@ -166,23 +174,45 @@ public class EditMenu extends Menu {
         lblEditExercises.setText("Edit Exercises");
 
         btnCreateExercise.setText("Create ");
+        btnCreateExercise.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateExerciseActionPerformed(evt);
+            }
+        });
 
         btnChangeExercise.setText("Change");
 
         btnDeleteExercise.setText("Delete");
+        btnDeleteExercise.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteExerciseActionPerformed(evt);
+            }
+        });
+
+        btnCancelEx.setText("Cancel");
+        btnCancelEx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelExActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlEditExercisesLayout = new javax.swing.GroupLayout(pnlEditExercises);
         pnlEditExercises.setLayout(pnlEditExercisesLayout);
         pnlEditExercisesLayout.setHorizontalGroup(
             pnlEditExercisesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEditExercisesLayout.createSequentialGroup()
+            .addGroup(pnlEditExercisesLayout.createSequentialGroup()
                 .addContainerGap(149, Short.MAX_VALUE)
                 .addGroup(pnlEditExercisesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCreateExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblEditExercises, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnChangeExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDeleteExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(114, 114, 114))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEditExercisesLayout.createSequentialGroup()
+                        .addGroup(pnlEditExercisesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnCreateExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblEditExercises, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnChangeExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDeleteExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(114, 114, 114))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEditExercisesLayout.createSequentialGroup()
+                        .addComponent(btnCancelEx)
+                        .addContainerGap())))
         );
         pnlEditExercisesLayout.setVerticalGroup(
             pnlEditExercisesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,7 +225,9 @@ public class EditMenu extends Menu {
                 .addComponent(btnChangeExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(btnDeleteExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCancelEx)
+                .addContainerGap())
         );
 
         getContentPane().add(pnlEditExercises, "card3");
@@ -260,6 +292,11 @@ public class EditMenu extends Menu {
         lblCreateDynExercise.setText("Create Dynamic Exercise");
 
         btnCancelDyn.setText("Cancel");
+        btnCancelDyn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelDynActionPerformed(evt);
+            }
+        });
 
         btnCreateDyn.setText("Create");
         btnCreateDyn.addActionListener(new java.awt.event.ActionListener() {
@@ -359,6 +396,11 @@ public class EditMenu extends Menu {
         lblCreateIsoExercise.setText("Create Isometric Exercise");
 
         btnCancelIso.setText("Cancel");
+        btnCancelIso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelIsoActionPerformed(evt);
+            }
+        });
 
         btnCreateIso.setText("Create");
 
@@ -445,6 +487,11 @@ public class EditMenu extends Menu {
         lblCreateAerExercise.setText("Create Aerobic Exercise");
 
         btnCancelAer.setText("Cancel");
+        btnCancelAer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelAerActionPerformed(evt);
+            }
+        });
 
         btnCreateAer.setText("Create");
 
@@ -523,6 +570,11 @@ public class EditMenu extends Menu {
         lblDeleteExercises.setText("Delete Exercises");
 
         btnCancel.setText("Cancel");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
 
         btnDelete.setText("Delete");
 
@@ -569,18 +621,30 @@ public class EditMenu extends Menu {
 
         btnDeleteRoutine.setText("Delete");
 
+        btnCancelRo.setText("Cancel");
+        btnCancelRo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelRoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlEditRoutinesLayout = new javax.swing.GroupLayout(pnlEditRoutines);
         pnlEditRoutines.setLayout(pnlEditRoutinesLayout);
         pnlEditRoutinesLayout.setHorizontalGroup(
             pnlEditRoutinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEditRoutinesLayout.createSequentialGroup()
+            .addGroup(pnlEditRoutinesLayout.createSequentialGroup()
                 .addContainerGap(149, Short.MAX_VALUE)
                 .addGroup(pnlEditRoutinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCreateRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblEditRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnChangeRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDeleteRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(114, 114, 114))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEditRoutinesLayout.createSequentialGroup()
+                        .addGroup(pnlEditRoutinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnCreateRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblEditRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnChangeRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDeleteRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(114, 114, 114))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEditRoutinesLayout.createSequentialGroup()
+                        .addComponent(btnCancelRo)
+                        .addContainerGap())))
         );
         pnlEditRoutinesLayout.setVerticalGroup(
             pnlEditRoutinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -593,7 +657,9 @@ public class EditMenu extends Menu {
                 .addComponent(btnChangeRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(btnDeleteRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCancelRo)
+                .addContainerGap())
         );
 
         getContentPane().add(pnlEditRoutines, "card3");
@@ -602,37 +668,87 @@ public class EditMenu extends Menu {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRoutinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRoutinesActionPerformed
-        // TODO add your handling code here:
+        pnlEditRoutines.setVisible(true);
+        pnlChoose.setVisible(false);
     }//GEN-LAST:event_btnRoutinesActionPerformed
 
     private void btnDynamicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDynamicActionPerformed
-        // TODO add your handling code here:
+        pnlChooseExercise.setVisible(false);
+        pnlCreateDynamicExercise.setVisible(true);
     }//GEN-LAST:event_btnDynamicActionPerformed
 
     private void btnIsometricActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIsometricActionPerformed
-        // TODO add your handling code here:
+        pnlChooseExercise.setVisible(false);
+        pnlCreateIsometricExercise.setVisible(true);
     }//GEN-LAST:event_btnIsometricActionPerformed
 
     private void btnAerobicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAerobicActionPerformed
-        // TODO add your handling code here:
+        pnlChooseExercise.setVisible(false);
+        pnlCreateAerobicExercise.setVisible(true);
     }//GEN-LAST:event_btnAerobicActionPerformed
 
-    private void btnCreateDynActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateDynActionPerformed
+    private void btnExercisesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExercisesActionPerformed
+        pnlEditExercises.setVisible(true);
+        pnlChoose.setVisible(false);
+    }//GEN-LAST:event_btnExercisesActionPerformed
+
+    private void btnCancelExActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelExActionPerformed
+       pnlChoose.setVisible(true);
+       pnlEditExercises.setVisible(false);
+    }//GEN-LAST:event_btnCancelExActionPerformed
+
+    private void btnCancelRoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelRoActionPerformed
+        pnlChoose.setVisible(true);
+        pnlEditRoutines.setVisible(false);
+    }//GEN-LAST:event_btnCancelRoActionPerformed
+
+    private void btnCreateExerciseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateExerciseActionPerformed
+        pnlEditExercises.setVisible(false);
+        pnlChooseExercise.setVisible(true);
+    }//GEN-LAST:event_btnCreateExerciseActionPerformed
+
+    private void btnDeleteExerciseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteExerciseActionPerformed
+        pnlEditExercises.setVisible(false);
+        pnlDeleteExercises.setVisible(true);
+    }//GEN-LAST:event_btnDeleteExerciseActionPerformed
+
+    private void btnCancelDynActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelDynActionPerformed
+        pnlCreateDynamicExercise.setVisible(false);
+        pnlEditExercises.setVisible(true);
+    }//GEN-LAST:event_btnCancelDynActionPerformed
+
+    private void btnCancelIsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelIsoActionPerformed
+        pnlCreateIsometricExercise.setVisible(false);
+        pnlEditExercises.setVisible(true);
+    }//GEN-LAST:event_btnCancelIsoActionPerformed
+
+    private void btnCancelAerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelAerActionPerformed
+        pnlCreateAerobicExercise.setVisible(false);
+        pnlEditExercises.setVisible(true);
+    }//GEN-LAST:event_btnCancelAerActionPerformed
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        pnlDeleteExercises.setVisible(false);
+        pnlEditExercises.setVisible(true);
+    }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void btnCreateDynActionPerformed(java.awt.event.ActionEvent evt) {                                             
         String title = txtTitleDyn.getText();
         String equipment = txtEquipDyn.getText();
         String[] parts = txtRepsDyn.getText().split("-");
         ArrayList<Integer> reps = null;
-        for(int i = 0; i < parts.length; i++) {
-            reps.add(Integer.parseInt(parts[i]));
+        for (String part : parts) {
+            reps.add(Integer.parseInt(part));
         }
         Double weight = Double.parseDouble(txtWeightDyn.getText());
-        String description = txtDescriptionDyn.getText();
-        if(description!=null && !description.isEmpty()) {
-            exerciseManager.createDynamExercise(title, equipment, reps, weight, description);
-        } else {
+        //String description = txtDescriptionDyn.getText();
+        //if(description!=null && !description.isEmpty()) {
+            //exerciseManager.createDynamExercise(title, equipment, reps, weight, description);
+        //} else {
             exerciseManager.createDynamExercise(title, equipment, reps, weight);
-        }
-    }//GEN-LAST:event_btnCreateDynActionPerformed
+        //}
+        JOptionPane.showMessageDialog(null,"Exercise successfully created!");
+    }                                            
 
     /**
      * @param args the command line arguments
@@ -680,7 +796,9 @@ public class EditMenu extends Menu {
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnCancelAer;
     private javax.swing.JButton btnCancelDyn;
+    private javax.swing.JButton btnCancelEx;
     private javax.swing.JButton btnCancelIso;
+    private javax.swing.JButton btnCancelRo;
     private javax.swing.JButton btnChangeExercise;
     private javax.swing.JButton btnChangeRoutine;
     private javax.swing.JButton btnCreateAer;
