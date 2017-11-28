@@ -7,6 +7,7 @@ package view;
 
 import controller.Persistence;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JList;
@@ -54,11 +55,6 @@ public class EditMenu extends Menu {
         btnRoutines = new javax.swing.JButton();
         btnExercises = new javax.swing.JButton();
         lblChoose = new javax.swing.JLabel();
-        pnlEditRoutines = new javax.swing.JPanel();
-        lblEditRoutine = new javax.swing.JLabel();
-        btnCreateRoutine = new javax.swing.JButton();
-        btnChangeRoutine = new javax.swing.JButton();
-        btnDeleteRoutine = new javax.swing.JButton();
         pnlEditExercises = new javax.swing.JPanel();
         lblEditExercises = new javax.swing.JLabel();
         btnCreateExercise = new javax.swing.JButton();
@@ -116,6 +112,11 @@ public class EditMenu extends Menu {
         btnCancel = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         pnlListDelete = new javax.swing.JScrollPane();
+        pnlEditRoutines = new javax.swing.JPanel();
+        lblEditRoutine = new javax.swing.JLabel();
+        btnCreateRoutine = new javax.swing.JButton();
+        btnChangeRoutine = new javax.swing.JButton();
+        btnDeleteRoutine = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
@@ -160,44 +161,6 @@ public class EditMenu extends Menu {
         );
 
         getContentPane().add(pnlChoose, "card2");
-
-        lblEditRoutine.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
-        lblEditRoutine.setText("Edit Routines");
-
-        btnCreateRoutine.setText("Create ");
-
-        btnChangeRoutine.setText("Change");
-
-        btnDeleteRoutine.setText("Delete");
-
-        javax.swing.GroupLayout pnlEditRoutinesLayout = new javax.swing.GroupLayout(pnlEditRoutines);
-        pnlEditRoutines.setLayout(pnlEditRoutinesLayout);
-        pnlEditRoutinesLayout.setHorizontalGroup(
-            pnlEditRoutinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEditRoutinesLayout.createSequentialGroup()
-                .addContainerGap(149, Short.MAX_VALUE)
-                .addGroup(pnlEditRoutinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCreateRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblEditRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnChangeRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDeleteRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(114, 114, 114))
-        );
-        pnlEditRoutinesLayout.setVerticalGroup(
-            pnlEditRoutinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlEditRoutinesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblEditRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCreateRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(btnChangeRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(btnDeleteRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
-        );
-
-        getContentPane().add(pnlEditRoutines, "card3");
 
         lblEditExercises.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         lblEditExercises.setText("Edit Exercises");
@@ -299,12 +262,17 @@ public class EditMenu extends Menu {
         btnCancelDyn.setText("Cancel");
 
         btnCreateDyn.setText("Create");
+        btnCreateDyn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateDynActionPerformed(evt);
+            }
+        });
 
         lblTitleDyn.setText("Title:");
 
         lblEquipDyn.setText("Equipment:");
 
-        lblRepsDyn.setText("Reps:");
+        lblRepsDyn.setText("Reps: (3-3)");
 
         lblWeightDyn.setText("Weight:");
 
@@ -592,6 +560,44 @@ public class EditMenu extends Menu {
 
         getContentPane().add(pnlDeleteExercises, "card3");
 
+        lblEditRoutine.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
+        lblEditRoutine.setText("Edit Routines");
+
+        btnCreateRoutine.setText("Create ");
+
+        btnChangeRoutine.setText("Change");
+
+        btnDeleteRoutine.setText("Delete");
+
+        javax.swing.GroupLayout pnlEditRoutinesLayout = new javax.swing.GroupLayout(pnlEditRoutines);
+        pnlEditRoutines.setLayout(pnlEditRoutinesLayout);
+        pnlEditRoutinesLayout.setHorizontalGroup(
+            pnlEditRoutinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEditRoutinesLayout.createSequentialGroup()
+                .addContainerGap(149, Short.MAX_VALUE)
+                .addGroup(pnlEditRoutinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreateRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblEditRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnChangeRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDeleteRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(114, 114, 114))
+        );
+        pnlEditRoutinesLayout.setVerticalGroup(
+            pnlEditRoutinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEditRoutinesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblEditRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCreateRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(btnChangeRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(btnDeleteRoutine, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
+        );
+
+        getContentPane().add(pnlEditRoutines, "card3");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -610,6 +616,23 @@ public class EditMenu extends Menu {
     private void btnAerobicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAerobicActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAerobicActionPerformed
+
+    private void btnCreateDynActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateDynActionPerformed
+        String title = txtTitleDyn.getText();
+        String equipment = txtEquipDyn.getText();
+        String[] parts = txtRepsDyn.getText().split("-");
+        ArrayList<Integer> reps = null;
+        for(int i = 0; i < parts.length; i++) {
+            reps.add(Integer.parseInt(parts[i]));
+        }
+        Double weight = Double.parseDouble(txtWeightDyn.getText());
+        String description = txtDescriptionDyn.getText();
+        if(description!=null && !description.isEmpty()) {
+            exerciseManager.createDynamExercise(title, equipment, reps, weight, description);
+        } else {
+            exerciseManager.createDynamExercise(title, equipment, reps, weight);
+        }
+    }//GEN-LAST:event_btnCreateDynActionPerformed
 
     /**
      * @param args the command line arguments
