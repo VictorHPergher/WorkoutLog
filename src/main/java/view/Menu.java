@@ -97,4 +97,14 @@ public abstract class Menu extends JFrame {
 		return exerciseManager;
 	}
 
+	public void gotoMainMenu() {
+		new MainMenu().setVisible(true);
+		dispose();
+	}
+
+	public void gotoStatsMenu() {
+		new StatisticsMenu().setVisible(true);
+		dispose();
+	}
+
 }

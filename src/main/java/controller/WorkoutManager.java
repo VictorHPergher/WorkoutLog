@@ -62,8 +62,8 @@ public class WorkoutManager implements Serializable {
 		return workout;
 	}
 
-	public Workout newWorkoutFromRoutine(Workout routine) {
-		Workout workout = routine;
+	public Workout newWorkoutFromRoutine(int index) {
+		Workout workout = routines.get(index);
 		String reportDate = dateFormat.format(now);
 		workouts.put(reportDate, workout);
 		registeredDates.add(reportDate);
