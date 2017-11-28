@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -21,7 +20,7 @@ public class MainMenu extends Menu {
 	private JPanel contentPane;
 
 	public MainMenu() {
-
+		super();
 		setTitle("WorkoutLog");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 768, 432);

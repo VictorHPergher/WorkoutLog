@@ -5,6 +5,7 @@
  */
 package controller;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -14,24 +15,28 @@ import java.util.HashMap;
 
 import model.Workout;
 
-public class WorkoutManager {
+public class WorkoutManager implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4141333640187059208L;
 	private HashMap<String, Workout> workouts;
-        private ArrayList<String> registeredDates;
+	private ArrayList<String> registeredDates;
 	private ArrayList<Workout> routines;
 
-        //format day/month/year
-        private final DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        private final Date now = Calendar.getInstance().getTime();
+	// format day/month/year
+	private final DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+	private final Date now = Calendar.getInstance().getTime();
 	private int routineAmount;
 
 	public int getRoutineAmount() {
 		return routineAmount;
 	}
-        
-        public ArrayList<String> getRegisteredDates() {
-            return this.registeredDates;
-        }
+
+	public ArrayList<String> getRegisteredDates() {
+		return this.registeredDates;
+	}
 
 	public Workout getWorkout(String date) {
 		return workouts.get(date);
@@ -54,17 +59,17 @@ public class WorkoutManager {
 
 	public Workout newWorkoutEmpty() {
 		Workout workout = new Workout();
-                String reportDate = dateFormat.format(now);
+		String reportDate = dateFormat.format(now);
 		workouts.put(reportDate, workout);
-                registeredDates.add(reportDate);
+		registeredDates.add(reportDate);
 		return workout;
 	}
 
 	public Workout newWorkoutFromRoutine(Workout routine) {
 		Workout workout = routine;
-                String reportDate = dateFormat.format(now);
+		String reportDate = dateFormat.format(now);
 		workouts.put(reportDate, workout);
-                registeredDates.add(reportDate);
+		registeredDates.add(reportDate);
 		return workout;
 	}
 

@@ -11,14 +11,21 @@ public class Workout {
 
 	private ArrayList<Exercise> exercises;
 	private String title;
-	private boolean routine;
 
 	public void remove(int index) {
 		exercises.remove(index);
 	}
-        
-        public ArrayList<Exercise> getExercises() {
-            return this.exercises;
-        }
+
+	public ArrayList<Exercise> getExercises() {
+		return this.exercises;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
 }

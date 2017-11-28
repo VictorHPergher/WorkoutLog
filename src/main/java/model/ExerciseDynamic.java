@@ -58,6 +58,7 @@ public class ExerciseDynamic extends Exercise {
 	public static class ExerciseDynamicBuilder extends Exercise implements ExerciseBuilder {
 
 		private ArrayList<Integer> reps;
+		@SuppressWarnings("unused")
 		private int[] tempo; // optional
 		private double weight;
 		private double suggestedRest; // optional

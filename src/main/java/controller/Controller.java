@@ -6,13 +6,12 @@
 package controller;
 
 import view.MainMenu;
-import view.StatisticsMenu;
 
 public class Controller {
 
 	public static void main(String[] args) {
 
-		new StatisticsMenu().setVisible(true);
+		new MainMenu().setVisible(true);
 
 	}
 

@@ -19,6 +19,10 @@ public abstract class Exercise {
 	private ArrayList<Integer> reps;
 	private ArrayList<Interval> intervals;
 
+	public double getWeight() {
+		return weight;
+	}
+
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}

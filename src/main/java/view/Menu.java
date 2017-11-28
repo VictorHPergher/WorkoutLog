@@ -12,6 +12,10 @@ import controller.WorkoutManager;
 import model.User;
 
 public abstract class Menu extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1831615594212556305L;
 	private ExerciseManager exerciseManager;
 	private WorkoutManager workoutManager;
 	private User user;
