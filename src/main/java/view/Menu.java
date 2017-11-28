@@ -102,9 +102,4 @@ public abstract class Menu extends JFrame {
 		dispose();
 	}
 
-	public void gotoStatsMenu() {
-		new StatisticsMenu().setVisible(true);
-		dispose();
-	}
-
 }
