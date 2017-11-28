@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JList;
 import static javax.swing.ListSelectionModel.SINGLE_SELECTION;
+import model.Workout;
 
 /**
  *
@@ -21,6 +22,7 @@ public class StatisticsMenu extends Menu {
 
 	private static final long serialVersionUID1 = 4806458398369774862L;
 	private JList list;
+        private WorkoutManager wm;
 
 	/**
 	 * Creates new form StatisticsMenu
@@ -32,7 +34,7 @@ public class StatisticsMenu extends Menu {
 		super();
 		initComponents();
 		String[] dates = { "No workout found" };
-		WorkoutManager wm = Persistence.read("workoutManager.txt");
+		wm = Persistence.read("workoutManager.txt");
 		if (wm.getRegisteredDates() != null && !wm.getRegisteredDates().isEmpty()) {
 			dates = wm.getRegisteredDates().toArray(new String[wm.getRegisteredDates().size()]);
 		}
@@ -95,7 +97,7 @@ public class StatisticsMenu extends Menu {
 
 	private void btnCheckActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnCheckActionPerformed
 		if (!list.isSelectionEmpty()) {
-
+                    Workout workout = wm.getWorkout(wm.getRegisteredDates().get(list.getSelectedIndex()));
 		}
 	}// GEN-LAST:event_btnCheckActionPerformed
 
