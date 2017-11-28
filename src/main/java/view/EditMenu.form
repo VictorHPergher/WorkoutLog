@@ -810,5 +810,139 @@
         </Component>
       </SubComponents>
     </Container>
+    <Container class="javax.swing.JPanel" name="pnlCreateAerobicExercise1">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card3"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="lblCreateAerExercise1" alignment="1" min="-2" pref="266" max="-2" attributes="0"/>
+                              <Component id="btnCreateAer1" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnCancelAer1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblTitleAer1" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txtTitleAer1" min="-2" pref="313" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="lblEquipAer1" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                                      <Component id="lblIntervalsAer1" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                                      <Component id="lblDescriptionAer1" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="txtEquipAer1" alignment="0" min="-2" pref="313" max="-2" attributes="0"/>
+                                      <Component id="txtIntervalsAer1" alignment="0" min="-2" pref="313" max="-2" attributes="0"/>
+                                      <Component id="txtDescriptionAer1" alignment="0" min="-2" pref="313" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="0" pref="17" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lblCreateAerExercise1" min="-2" pref="48" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblTitleAer1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="txtTitleAer1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtEquipAer1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="lblEquipAer1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtIntervalsAer1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="lblIntervalsAer1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblDescriptionAer1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="txtDescriptionAer1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="85" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnCancelAer1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCreateAer1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lblCreateAerExercise1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="20" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Create Aerobic Exercise"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnCancelAer1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnCreateAer1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Create"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblTitleAer1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Title:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblEquipAer1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Equipment:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblIntervalsAer1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Intervals:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblDescriptionAer1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Description:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtTitleAer1">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtEquipAer1">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtIntervalsAer1">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtDescriptionAer1">
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>
