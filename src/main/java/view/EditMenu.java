@@ -9,12 +9,13 @@ package view;
  *
  * @author marina
  */
-public class EditMenu extends javax.swing.JFrame {
+public class EditMenu extends Menu {
 
     /**
      * Creates new form EditMenu
      */
     public EditMenu() {
+        super();
         initComponents();
     }
 
