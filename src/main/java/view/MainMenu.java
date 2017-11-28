@@ -84,10 +84,7 @@ public class MainMenu extends Menu {
 		contentPane.add(panel_4);
 
 		JButton btnStats = new JButton("Stats");
-		btnStats.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				// gotoStatsMenu();
-			}
+		btnStats.addActionListener((e) -> {
 		});
 		panel_4.add(btnStats);
 	}

@@ -13,6 +13,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JSeparator;
 import javax.swing.JSpinner;
+import javax.swing.JButton;
 
 public class ExerciseMenu extends Menu {
 
@@ -39,9 +40,10 @@ public class ExerciseMenu extends Menu {
 			ExerciseAerobic exerciseAerobic = (ExerciseAerobic) exercise;
 			JSpinner[] jSpinners = new JSpinner[exerciseAerobic.getIntervals().size()];
 
+			JPanel aerobicWindow = new JPanel();
+			contentPane.add(aerobicWindow);
+
 			for (int i = 0; i < exercise.getIntervals().size(); i++) {
-				JPanel aerobicWindow = new JPanel();
-				contentPane.add(aerobicWindow);
 
 				JLabel lblSetX = new JLabel("Set " + i + ":");
 				aerobicWindow.add(lblSetX);
@@ -53,15 +55,18 @@ public class ExerciseMenu extends Menu {
 				JLabel lblMinutes = new JLabel("min");
 				aerobicWindow.add(lblMinutes);
 			}
+			JButton btnSaveChanges = new JButton("Save changes");
+			contentPane.add(btnSaveChanges);
 
 		} else if (exercise instanceof ExerciseDynamic) {
 			ExerciseDynamic exerciseDynamic = (ExerciseDynamic) exercise;
 
 			JSpinner[] jSpinners = new JSpinner[exerciseDynamic.getReps().size()];
 
+			JPanel dynamicWindow = new JPanel();
+			contentPane.add(dynamicWindow);
+
 			for (int i = 0; i < exerciseDynamic.getReps().size(); i++) {
-				JPanel dynamicWindow = new JPanel();
-				contentPane.add(dynamicWindow);
 
 				JLabel lblSetX = new JLabel("Set " + i + ":");
 				dynamicWindow.add(lblSetX);
@@ -73,13 +78,16 @@ public class ExerciseMenu extends Menu {
 				JLabel lblReps = new JLabel("reps");
 				dynamicWindow.add(lblReps);
 			}
+			JButton btnSaveChanges = new JButton("Save changes");
+			contentPane.add(btnSaveChanges);
 		} else {
 			ExerciseIsometric exerciseIsometric = (ExerciseIsometric) exercise;
 			JSpinner[] jSpinners = new JSpinner[exerciseIsometric.getIntervals().size()];
 
+			JPanel isometricWindow = new JPanel();
+			contentPane.add(isometricWindow);
+
 			for (int i = 0; i < exerciseIsometric.getIntervals().size(); i++) {
-				JPanel isometricWindow = new JPanel();
-				contentPane.add(isometricWindow);
 
 				JLabel lblSetX = new JLabel("Set " + i + ":");
 				isometricWindow.add(lblSetX);
@@ -92,6 +100,10 @@ public class ExerciseMenu extends Menu {
 				isometricWindow.add(lblSeconds);
 
 			}
+			JButton btnSaveChanges = new JButton("Save changes");
+			btnSaveChanges.addActionListener((e) -> {
+			});
+			contentPane.add(btnSaveChanges);
 		}
 	}
 }
