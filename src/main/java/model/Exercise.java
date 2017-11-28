@@ -15,8 +15,6 @@ public abstract class Exercise {
 	protected String description, title, equipment;
 
 	private double weight;
-	private ArrayList<Double> sets;
-	private ArrayList<Integer> reps;
 	private ArrayList<Interval> intervals;
 
 	public String getTitle() {
@@ -29,14 +27,6 @@ public abstract class Exercise {
 
 	public void setWeight(double weight) {
 		this.weight = weight;
-	}
-
-	public ArrayList<Double> getSets() {
-		return sets;
-	}
-
-	public ArrayList<Integer> getReps() {
-		return reps;
 	}
 
 	public ArrayList<Interval> getIntervals() {

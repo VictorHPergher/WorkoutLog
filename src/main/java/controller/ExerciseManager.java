@@ -59,18 +59,6 @@ public class ExerciseManager implements Serializable {
 		availableExercises.get(availableExercises.indexOf(exercise)).getIntervals().remove(index);
 	}
 
-	public void addSet(ExerciseDynamic exercise, int reps) {
-		availableExercises.get(availableExercises.indexOf(exercise)).getReps().add(reps);
-	}
-
-	public void addRep(ExerciseIsometric exercise, double time) {
-		availableExercises.get(availableExercises.indexOf(exercise)).getSets().add(time);
-	}
-
-	public void removeRep(ExerciseIsometric exercise, int index) {
-		availableExercises.get(availableExercises.indexOf(exercise)).getSets().remove(index);
-	}
-
 	public void changeWeight(Exercise exercise, double weight) {
 		availableExercises.get(availableExercises.indexOf(exercise)).setWeight(weight);
 	}
