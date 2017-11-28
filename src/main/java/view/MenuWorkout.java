@@ -39,16 +39,17 @@ public class MenuWorkout extends Menu {
 
 		JLabel lblNewLabel = new JLabel("New label");
 		panel.add(lblNewLabel);
-
-		for (int i = 0; i < activeWorkout.getExercises().size(); i++) {
-			JButton button = new JButton(activeWorkout.getExercises().get(i).getTitle());
-			int j = i; // NO SE PORQUE NECESITO HACER ESTO. DENTRO DEL ACTIONLISTENER I NO ES ACEPTADO
-			button.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {
-					gotoExerciseMenu(activeWorkout.getExercises().get(j));
-				}
-			});
-			panel.add(button);
+		if (activeWorkout != null) {
+			for (int i = 0; i < activeWorkout.getExercises().size(); i++) {
+				JButton button = new JButton(activeWorkout.getExercises().get(i).getTitle());
+				int j = i; // NO SE PORQUE NECESITO HACER ESTO. DENTRO DEL ACTIONLISTENER I NO ES ACEPTADO
+				button.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent arg0) {
+						gotoExerciseMenu(activeWorkout.getExercises().get(j));
+					}
+				});
+				panel.add(button);
+			}
 		}
 
 		JPanel panel_1 = new JPanel();

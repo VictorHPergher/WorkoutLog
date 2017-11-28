@@ -12,6 +12,8 @@ import java.util.logging.Logger;
 import javax.swing.JList;
 import static javax.swing.ListSelectionModel.SINGLE_SELECTION;
 import model.Workout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 /**
  *
@@ -60,6 +62,12 @@ public class MenuStats extends Menu {
 
 		workoutListPanel = new javax.swing.JScrollPane();
 		btnCancel = new javax.swing.JButton();
+		btnCancel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				new MenuMain().setVisible(true);
+			}
+		});
 		btnCheck = new javax.swing.JButton();
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -100,6 +108,7 @@ public class MenuStats extends Menu {
 
 	private void btnCheckActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnCheckActionPerformed
 		if (!list.isSelectionEmpty()) {
+			@SuppressWarnings("unused")
 			Workout workout = workoutManager
 					.getWorkout(workoutManager.getRegisteredDates().get(list.getSelectedIndex()));
 		}
@@ -119,17 +128,13 @@ public class MenuStats extends Menu {
 				}
 			}
 		} catch (ClassNotFoundException ex) {
-			java.util.logging.Logger.getLogger(MenuStats.class.getName()).log(java.util.logging.Level.SEVERE, null,
-					ex);
+			java.util.logging.Logger.getLogger(MenuStats.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 		} catch (InstantiationException ex) {
-			java.util.logging.Logger.getLogger(MenuStats.class.getName()).log(java.util.logging.Level.SEVERE, null,
-					ex);
+			java.util.logging.Logger.getLogger(MenuStats.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 		} catch (IllegalAccessException ex) {
-			java.util.logging.Logger.getLogger(MenuStats.class.getName()).log(java.util.logging.Level.SEVERE, null,
-					ex);
+			java.util.logging.Logger.getLogger(MenuStats.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 		} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-			java.util.logging.Logger.getLogger(MenuStats.class.getName()).log(java.util.logging.Level.SEVERE, null,
-					ex);
+			java.util.logging.Logger.getLogger(MenuStats.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 		}
 		// </editor-fold>
 

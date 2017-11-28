@@ -9,6 +9,7 @@ import javax.swing.JSeparator;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 
 public class MenuMain extends Menu {
@@ -21,6 +22,13 @@ public class MenuMain extends Menu {
 
 	public MenuMain() {
 		super();
+
+		//gambearras para inicializar o programa
+		user.setWeight(75);
+		exerciseManager.createDynamExercise("Pushup", "Bodyweight", new ArrayList<Integer>(), user.getWeight());
+		exerciseManager.createDynamExercise("Pullups", "Bodyweight", new ArrayList<Integer>(), user.getWeight());
+		
+		
 		setTitle("WorkoutLog");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 768, 432);
@@ -89,6 +97,13 @@ public class MenuMain extends Menu {
 		panel_2.add(separator_2);
 
 		JButton btnNewEmptyWorkout = new JButton("New empty workout");
+		btnNewEmptyWorkout.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				new MenuWorkout().setVisible(true);
+
+			}
+		});
 		panel_2.add(btnNewEmptyWorkout);
 
 		JPanel panel_4 = new JPanel();

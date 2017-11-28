@@ -56,6 +56,7 @@ public abstract class Menu extends JFrame {
 		workoutManager = tryReadWorkoutManager(workoutManagerPath);
 		exerciseManager = tryReadExerciseManager(exerciseManagerPath);
 		user = tryReadUser(userPath);
+		trySaveAll();
 	}
 
 	private User tryReadUser(String path) {
@@ -95,11 +96,6 @@ public abstract class Menu extends JFrame {
 			ex.printStackTrace();
 		}
 		return exerciseManager;
-	}
-
-	public void gotoMainMenu() {
-		new MenuMain().setVisible(true);
-		dispose();
 	}
 
 }
