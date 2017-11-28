@@ -88,6 +88,11 @@ public class EditMenu extends javax.swing.JFrame {
         txtEquipAer = new javax.swing.JTextField();
         txtIntervalsAer = new javax.swing.JTextField();
         txtDescriptionAer = new javax.swing.JTextField();
+        pnlDeleteExercises = new javax.swing.JPanel();
+        lblDeleteExercises = new javax.swing.JLabel();
+        btnCancel = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
+        pnlListDelete = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
@@ -523,6 +528,47 @@ public class EditMenu extends javax.swing.JFrame {
 
         getContentPane().add(pnlCreateAerobicExercise, "card3");
 
+        lblDeleteExercises.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
+        lblDeleteExercises.setText("Delete Exercises");
+
+        btnCancel.setText("Cancel");
+
+        btnDelete.setText("Delete");
+
+        javax.swing.GroupLayout pnlDeleteExercisesLayout = new javax.swing.GroupLayout(pnlDeleteExercises);
+        pnlDeleteExercises.setLayout(pnlDeleteExercisesLayout);
+        pnlDeleteExercisesLayout.setHorizontalGroup(
+            pnlDeleteExercisesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDeleteExercisesLayout.createSequentialGroup()
+                .addContainerGap(47, Short.MAX_VALUE)
+                .addGroup(pnlDeleteExercisesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDeleteExercisesLayout.createSequentialGroup()
+                        .addComponent(btnDelete)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCancel)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDeleteExercisesLayout.createSequentialGroup()
+                        .addGroup(pnlDeleteExercisesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblDeleteExercises, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pnlListDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(55, 55, 55))))
+        );
+        pnlDeleteExercisesLayout.setVerticalGroup(
+            pnlDeleteExercisesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDeleteExercisesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblDeleteExercises, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlListDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGroup(pnlDeleteExercisesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCancel)
+                    .addComponent(btnDelete))
+                .addContainerGap())
+        );
+
+        getContentPane().add(pnlDeleteExercises, "card3");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -579,6 +625,7 @@ public class EditMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAerobic;
+    private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnCancelAer;
     private javax.swing.JButton btnCancelDyn;
     private javax.swing.JButton btnCancelIso;
@@ -589,6 +636,7 @@ public class EditMenu extends javax.swing.JFrame {
     private javax.swing.JButton btnCreateExercise;
     private javax.swing.JButton btnCreateIso;
     private javax.swing.JButton btnCreateRoutine;
+    private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnDeleteExercise;
     private javax.swing.JButton btnDeleteRoutine;
     private javax.swing.JButton btnDynamic;
@@ -600,6 +648,7 @@ public class EditMenu extends javax.swing.JFrame {
     private javax.swing.JLabel lblCreateAerExercise;
     private javax.swing.JLabel lblCreateDynExercise;
     private javax.swing.JLabel lblCreateIsoExercise;
+    private javax.swing.JLabel lblDeleteExercises;
     private javax.swing.JLabel lblDescriptionAer;
     private javax.swing.JLabel lblDescriptionDyn;
     private javax.swing.JLabel lblDescriptionIso;
@@ -622,8 +671,10 @@ public class EditMenu extends javax.swing.JFrame {
     private javax.swing.JPanel pnlCreateAerobicExercise;
     private javax.swing.JPanel pnlCreateDynamicExercise;
     private javax.swing.JPanel pnlCreateIsometricExercise;
+    private javax.swing.JPanel pnlDeleteExercises;
     private javax.swing.JPanel pnlEditExercises;
     private javax.swing.JPanel pnlEditRoutines;
+    private javax.swing.JScrollPane pnlListDelete;
     private javax.swing.JTextField txtDescriptionAer;
     private javax.swing.JTextField txtDescriptionDyn;
     private javax.swing.JTextField txtDescriptionIso;
