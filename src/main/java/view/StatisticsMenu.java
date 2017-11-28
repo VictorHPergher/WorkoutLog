@@ -5,7 +5,11 @@
  */
 package view;
 
+import controller.Persistence;
 import controller.WorkoutManager;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JList;
 import static javax.swing.ListSelectionModel.SINGLE_SELECTION;
 
@@ -19,17 +23,19 @@ public class StatisticsMenu extends Menu {
      *
      */
     private static final long serialVersionUID = 4806458398369774862L;
-    private WorkoutManager wm;
     private JList list;
 
     /**
      * Creates new form StatisticsMenu
+     * @throws java.io.IOException
+     * @throws java.lang.ClassNotFoundException
      */
-    public StatisticsMenu() {
+    public StatisticsMenu() throws IOException, ClassNotFoundException {
         super();
         initComponents();
         String[] dates = {"No workout found"};
-        if (!wm.getRegisteredDates().isEmpty()) {
+        WorkoutManager wm = Persistence.read("workoutManager.txt");
+        if(!wm.getRegisteredDates().isEmpty()) {
             dates = wm.getRegisteredDates().toArray(new String[wm.getRegisteredDates().size()]);
         }
         list = new JList(dates);
@@ -136,7 +142,13 @@ public class StatisticsMenu extends Menu {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new StatisticsMenu().setVisible(true);
+                try {
+                    new StatisticsMenu().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(StatisticsMenu.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(StatisticsMenu.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
