@@ -14,7 +14,6 @@ import model.Exercise;
 import model.ExerciseAerobic;
 import model.ExerciseDynamic;
 import model.ExerciseIsometric;
-import model.Interval;
 
 /**
  *
@@ -52,9 +51,7 @@ public class ExerciseManager implements Serializable {
 		deletedExercises.remove(index);
 	}
 
-	public void addInterval(int intensity, double time, ExerciseAerobic exercise) {
-		availableExercises.get(availableExercises.indexOf(exercise)).getIntervals().add(new Interval(intensity, time));
-	}
+	
 
 	public void removeInterval(ExerciseAerobic exercise, int index) {
 		availableExercises.get(availableExercises.indexOf(exercise)).getIntervals().remove(index);
@@ -136,11 +133,11 @@ public class ExerciseManager implements Serializable {
 	}
 
 	// aerobic exercises
-	public void createAerobicExercise(String title, String equipment, ArrayList<Interval> intervals) {
+	public void createAerobicExercise(String title, String equipment, ArrayList<Integer> intervals) {
 		availableExercises.add(new ExerciseAerobic.ExerciseAerobicBuilder(title, equipment, intervals));
 	}
 
-	public void createAerobicExercise(String title, String equipment, ArrayList<Interval> intervals,
+	public void createAerobicExercise(String title, String equipment, ArrayList<Integer> intervals,
 			String description) {
 		availableExercises.add(
 				new ExerciseAerobic.ExerciseAerobicBuilder(title, equipment, intervals).addDescription(description));

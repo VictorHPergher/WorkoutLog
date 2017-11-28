@@ -54,32 +54,43 @@ public class ExerciseMenu extends Menu {
 				aerobicWindow.add(spinner);
 				JLabel lblMinutes = new JLabel("min");
 				aerobicWindow.add(lblMinutes);
+
 			}
 			JButton btnSaveChanges = new JButton("Save changes");
+			btnSaveChanges.addActionListener((e) -> {
+				for (int j = 0; j < jSpinners.length; j++) {
+					exerciseAerobic.getIntervals().set(j, (Integer) jSpinners[j].getValue());
+				}
+			});
 			contentPane.add(btnSaveChanges);
 
 		} else if (exercise instanceof ExerciseDynamic) {
-			ExerciseDynamic exerciseDynamic = (ExerciseDynamic) exercise;
-
-			JSpinner[] jSpinners = new JSpinner[exerciseDynamic.getReps().size()];
-
-			JPanel dynamicWindow = new JPanel();
-			contentPane.add(dynamicWindow);
-
-			for (int i = 0; i < exerciseDynamic.getReps().size(); i++) {
-
-				JLabel lblSetX = new JLabel("Set " + i + ":");
-				dynamicWindow.add(lblSetX);
-
-				JSpinner spinner = new JSpinner();
-				jSpinners[i] = spinner;
-
-				dynamicWindow.add(spinner);
-				JLabel lblReps = new JLabel("reps");
-				dynamicWindow.add(lblReps);
-			}
-			JButton btnSaveChanges = new JButton("Save changes");
-			contentPane.add(btnSaveChanges);
+			// ExerciseDynamic exerciseDynamic = (ExerciseDynamic) exercise;
+			//
+			// JSpinner[] jSpinners = new JSpinner[exerciseDynamic.getReps().size()];
+			//
+			// JPanel dynamicWindow = new JPanel();
+			// contentPane.add(dynamicWindow);
+			//
+			// for (int i = 0; i < exerciseDynamic.getReps().size(); i++) {
+			//
+			// JLabel lblSetX = new JLabel("Set " + i + ":");
+			// dynamicWindow.add(lblSetX);
+			//
+			// JSpinner spinner = new JSpinner();
+			// jSpinners[i] = spinner;
+			//
+			// dynamicWindow.add(spinner);
+			// JLabel lblReps = new JLabel("reps");
+			// dynamicWindow.add(lblReps);
+			// }
+			// JButton btnSaveChanges = new JButton("Save changes");
+			// btnSaveChanges.addActionListener((e) -> {
+			// for (int j = 0; j < jSpinners.length; j++) {
+			// exerciseDynamic.getReps().set(j, (Integer) jSpinners[j].getValue());
+			// }
+			// });
+			// contentPane.add(btnSaveChanges);
 		} else {
 			ExerciseIsometric exerciseIsometric = (ExerciseIsometric) exercise;
 			JSpinner[] jSpinners = new JSpinner[exerciseIsometric.getIntervals().size()];
@@ -105,5 +116,46 @@ public class ExerciseMenu extends Menu {
 			});
 			contentPane.add(btnSaveChanges);
 		}
+
+		ExerciseDynamic exerciseDynamic = (ExerciseDynamic) exercise;
+
+		JSpinner[] jSpinners = new JSpinner[exerciseDynamic.getReps().size()];
+
+		JPanel dynamicWindow = new JPanel();
+		contentPane.add(dynamicWindow);
+		dynamicWindow.setLayout(new BoxLayout(dynamicWindow, BoxLayout.X_AXIS));
+
+		for (int i = 0; i < exerciseDynamic.getReps().size(); i++) {
+
+			JLabel lblSetX = new JLabel("Set " + i + ":");
+			dynamicWindow.add(lblSetX);
+
+			JSpinner spinner = new JSpinner();
+			jSpinners[i] = spinner;
+
+			dynamicWindow.add(spinner);
+			JLabel lblReps = new JLabel("reps");
+			dynamicWindow.add(lblReps);
+		}
+
+		JButton btnAddReps = new JButton("Add reps");
+		btnAddReps.addActionListener((e) -> {
+			exerciseDynamic.getReps().add(0);
+			dispose();
+			new ExerciseMenu(exerciseDynamic);
+		});
+
+		JButton btnSaveChanges = new JButton("Save changes");
+		btnSaveChanges.addActionListener((e) -> {
+			for (int j = 0; j < jSpinners.length; j++) {
+				exerciseDynamic.getReps().set(j, (Integer) jSpinners[j].getValue());
+				exercise = exerciseDynamic;
+			}
+		});
+
+		JSeparator separator_1 = new JSeparator();
+		contentPane.add(separator_1);
+		contentPane.add(btnSaveChanges);
+
 	}
 }

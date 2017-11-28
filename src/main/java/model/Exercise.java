@@ -15,7 +15,7 @@ public abstract class Exercise {
 	protected String description, title, equipment;
 
 	private double weight;
-	private ArrayList<Interval> intervals;
+	private ArrayList<Integer> intervals;
 
 	public String getTitle() {
 		return title;
@@ -29,7 +29,7 @@ public abstract class Exercise {
 		this.weight = weight;
 	}
 
-	public ArrayList<Interval> getIntervals() {
+	public ArrayList<Integer> getIntervals() {
 		return intervals;
 	}
 }

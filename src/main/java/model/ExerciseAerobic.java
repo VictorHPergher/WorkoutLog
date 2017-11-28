@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class ExerciseAerobic extends Exercise {
 
-	private ArrayList<Interval> intervals;
+	private ArrayList<Integer> intervals;
 
 	private ExerciseAerobic(ExerciseAerobicBuilder builder) {
 		this.title = builder.title;
@@ -18,15 +18,15 @@ public class ExerciseAerobic extends Exercise {
 		this.intervals = builder.intervals;
 	}
 
-	public ArrayList<Interval> getIntervals() {
+	public ArrayList<Integer> getIntervals() {
 		return intervals;
 	}
 
 	public static class ExerciseAerobicBuilder extends Exercise implements ExerciseBuilder {
 
-		private ArrayList<Interval> intervals;
+		private ArrayList<Integer> intervals;
 
-		public ExerciseAerobicBuilder(String title, String equipment, ArrayList<Interval> intervals) {
+		public ExerciseAerobicBuilder(String title, String equipment, ArrayList<Integer> intervals) {
 			this.title = title;
 			this.equipment = equipment;
 			this.intervals = intervals;
