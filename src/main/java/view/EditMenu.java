@@ -5,18 +5,40 @@
  */
 package view;
 
+import controller.Persistence;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JList;
+import static javax.swing.ListSelectionModel.SINGLE_SELECTION;
+
 /**
  *
  * @author marina
  */
 public class EditMenu extends Menu {
+    
+    private JList list;
 
     /**
      * Creates new form EditMenu
+     * @throws java.io.IOException
+     * @throws java.lang.ClassNotFoundException
      */
-    public EditMenu() {
+    public EditMenu() throws IOException, ClassNotFoundException {
         super();
         initComponents();
+        String[] titles = {"No exercise found"};
+        exerciseManager = Persistence.read("exerciseManager.txt");
+        if(exerciseManager.getAvailableExercises() != null && !exerciseManager.getAvailableExercises().isEmpty()) {
+            for(int i = 0; i < exerciseManager.getAvailableExercises().size(); i++) {
+                titles[i] = exerciseManager.getAvailableExercises().get(i).getTitle();
+            }
+        }
+        list = new JList(titles);
+        list.setSelectionMode(SINGLE_SELECTION);
+        pnlListDelete.add(list);
+        pack();
     }
 
     /**
@@ -619,7 +641,13 @@ public class EditMenu extends Menu {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EditMenu().setVisible(true);
+                try {
+                    new EditMenu().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(EditMenu.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(EditMenu.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
