@@ -26,6 +26,12 @@ public class ExerciseManager implements Serializable {
 	private ArrayList<Exercise> deletedExercises;
 	private HashMap<Double, Date> repMaxHistory;
 
+	public ExerciseManager() {
+		availableExercises = new ArrayList<>();
+		deletedExercises = new ArrayList<>();
+		repMaxHistory = new HashMap<>();
+	}
+
 	public double calculate1RepMax(int reps, double weight) {
 
 		double OneRepMax = weight / reps;
@@ -50,8 +56,6 @@ public class ExerciseManager implements Serializable {
 		availableExercises.add(deletedExercises.get(index));
 		deletedExercises.remove(index);
 	}
-
-	
 
 	public void removeInterval(ExerciseAerobic exercise, int index) {
 		availableExercises.get(availableExercises.indexOf(exercise)).getIntervals().remove(index);
