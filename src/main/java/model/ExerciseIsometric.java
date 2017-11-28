@@ -13,13 +13,13 @@ import java.util.ArrayList;
  */
 public class ExerciseIsometric extends Exercise {
 	private double weight;
-	private ArrayList<Double> sets;
+	private ArrayList<Double> reps;
 	private double suggestedRest; // opcional
 
 	private ExerciseIsometric(ExerciseIsometricBuilder builder) {
 		this.title = builder.title;
 		this.equipment = builder.equipment;
-		this.sets = builder.sets;
+		this.reps = builder.sets;
 		this.weight = builder.weight;
 		this.description = builder.description;
 		this.suggestedRest = builder.suggestedRest;
@@ -34,11 +34,11 @@ public class ExerciseIsometric extends Exercise {
 	}
 
 	public ArrayList<Double> getSets() {
-		return sets;
+		return reps;
 	}
 
 	public void setSets(ArrayList<Double> sets) {
-		this.sets = sets;
+		this.reps = sets;
 	}
 
 	public double getSuggestedRest() {

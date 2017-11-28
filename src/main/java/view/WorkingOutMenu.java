@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import model.Exercise;
 import model.Workout;
 
 import javax.swing.BoxLayout;
@@ -37,11 +38,11 @@ public class WorkingOutMenu extends Menu {
 		panel.add(lblNewLabel);
 
 		for (int i = 0; i < activeWorkout.getExercises().size(); i++) {
-			JButton button = new JButton(workoutManager.getRoutine(i).getTitle());
+			JButton button = new JButton(activeWorkout.getExercises().get(i).getTitle());
 			int j = i; // NO SE PORQUE NECESITO HACER ESTO. DENTRO DEL ACTIONLISTENER I NO ES ACEPTADO
 			button.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					workoutManager.newWorkoutFromRoutine(j);
+					gotoExerciseMenu(activeWorkout.getExercises().get(j));
 				}
 			});
 			panel.add(button);
@@ -49,6 +50,11 @@ public class WorkingOutMenu extends Menu {
 
 		JPanel panel_1 = new JPanel();
 		contentPane.add(panel_1);
+	}
+
+	protected void gotoExerciseMenu(Exercise exercise) {
+		new ExerciseMenu(exercise).setVisible(true);
+		dispose();
 	}
 
 }

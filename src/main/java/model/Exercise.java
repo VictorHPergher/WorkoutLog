@@ -19,6 +19,10 @@ public abstract class Exercise {
 	private ArrayList<Integer> reps;
 	private ArrayList<Interval> intervals;
 
+	public String getTitle() {
+		return title;
+	}
+
 	public double getWeight() {
 		return weight;
 	}
