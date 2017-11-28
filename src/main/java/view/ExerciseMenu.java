@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -8,8 +7,6 @@ import javax.swing.border.EmptyBorder;
 import model.Exercise;
 import model.ExerciseAerobic;
 import model.ExerciseDynamic;
-import model.ExerciseIsometric;
-
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JSeparator;
