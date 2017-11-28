@@ -8,7 +8,6 @@ import javax.swing.JLabel;
 import javax.swing.JSeparator;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 
 public class MainMenu extends Menu {
